@@ -1,0 +1,599 @@
+---
+title: "Creatinine_project"
+author: "Group K"
+date: "October 4, 2018"
+output: html_document
+---
+
+### Cohort selection for the Ceatinine project 
+
+```{r setup, include=FALSE}
+
+library(bigrquery)
+library(dplyr)
+#library(plyr)
+library(tidyr)
+project <- "hst-953-2018"
+library(knitr)
+library (ggplot2)
+library(Hmisc)
+library(gridExtra)
+
+```
+#COHORT SELECTION
+
+As MIMIC-III is primarily an intensive care unit (ICU) database, we will focus on patients admitted to and discharged from the ICU. We will select our cohort based off the ICU stay (identified by `icustay_id`). 
+
+```{r}
+#selcting the ICU admissions that have 
+
+sql<- paste("
+SELECT icu.subject_id, icu.hadm_id, icu.icustay_id, pat.gender,  
+DATETIME_DIFF(adm.admittime, pat.dob, YEAR) AS ageatadmin,
+RANK() OVER (PARTITION BY icu.subject_id ORDER BY icu.intime) AS icustay_id_order, 
+DATETIME_DIFF(icu.outtime, icu.intime, HOUR) AS icu_length_of_stay, adm.deathtime, adm.admission_type, 
+adm.admission_location, adm.ethnicity, adm.diagnosis, serv.prev_service, serv.curr_service
+FROM `physionet-data.mimiciii_clinical.icustays` icu
+INNER JOIN `physionet-data.mimiciii_clinical.admissions` adm
+ON icu.hadm_id = adm.hadm_id
+INNER JOIN `physionet-data.mimiciii_clinical.patients`  pat
+ON icu.subject_id = pat.subject_id
+INNER JOIN `physionet-data.mimiciii_clinical.services`  serv
+ON icu.hadm_id = serv.hadm_id
+")
+
+Admissions <- query_exec(sql,project=project,use_legacy_sql=FALSE)
+
+
+#patient exclusion critera
+#Exluding patients younger than 15 or older tan 150 years
+Admissions$age_exclusion<- ifelse(Admissions$age<15 | Admissions$age>150, 1, 0)
+#Exluding patients second or extra admission, we are focusing in intial admisions
+Admissions$stay_exclusion<- ifelse(Admissions$icustay_id_order >1, 1, 0)
+#Exluding patients whit less than 4 hours of ICU stay 
+Admissions$lenght_stay_exclusion<- ifelse(Admissions$icu_length_of_stay <4, 1, 0)
+
+#total Exclusion
+Admissions$exclude <- ifelse(Admissions$age_exclusion | Admissions$stay_exclusion | Admissions$lenght_stay_exclusion, 1, 0)
+
+Admission_final <- subset(Admissions, Admissions$exclude ==0)
+
+table(Admissions$age_exclusion)
+table(Admissions$stay_exclusion)
+table(Admissions$lenght_stay_exclusion)
+
+
+#detach(package:plyr)
+#since the admission can have multiple services on charge I concatenate them 
+Admission_final <- Admission_final %>%
+                   group_by(icustay_id) %>%
+                   mutate(current_service = paste(curr_service, collapse=", ")) %>%
+                   select("subject_id","hadm_id", "icustay_id", "gender", "ageatadmin",
+                          "icu_length_of_stay", "admission_type", "admission_location",
+                          "ethnicity", "diagnosis","current_service") %>% 
+                    unique()
+
+Admission_final$RenalFailure_dx = ifelse(grepl("RENAL FAILURE", Admission_final$diagnosis),
+                                         "yes", "No") 
+                   
+Admission_final$Sepsis_dx = ifelse(grepl("SEPS", Admission_final$diagnosis),
+                                         "yes", "No")       
+Admission_final$Infection_dx = ifelse(grepl("INFECTION", Admission_final$diagnosis),
+                                         "yes", "No")       
+
+
+```
+There is a total of `nrow(Admission_final)` valid admission
+
+##SELECTING THE CREATININE VALUES AT BASELINE AND AT INITIAL TIMEPOINTS 
+```{r}
+
+#### evaluating Laboratories ---
+
+sql <- paste("SELECT * FROM `physionet-data.mimiciii_clinical.d_labitems`")
+labsnametable<- query_exec(sql,project=project,use_legacy_sql=FALSE)
+
+labsnametable[grep('Hemo',labsnametable$LABEL),]
+
+labsnametable[grep('B12',labsnametable$LABEL),]
+labsnametable[grep('50810',labsnametable$ITEMID),]
+
+```
+
+ITEMIDs 50912 are CREATININE codes
+###SELECTING PATIENT THAT HAVE A BASELINE VALUE AND ARE NOT EXCLUDED BY OUR PROVIUS SELECTION CRITERIA. 
+```{r}
+
+sql <- paste("
+WITH hb AS
+(SELECT labs.row_id, labs.subject_id,icu.icustay_id, labs.hadm_id, labs.charttime, adm.admittime, 
+            labs.itemid, labs.valuenum, namelab.label,
+            DATETIME_DIFF(labs.charttime, adm.admittime, DAY) AS labs_timelag
+            FROM `physionet-data.mimiciii_clinical.labevents` labs
+             INNER JOIN `physionet-data.mimiciii_clinical.d_labitems` namelab
+              ON labs.itemid = namelab.itemid
+            INNER JOIN `physionet-data.mimiciii_clinical.admissions` adm
+            ON labs.subject_id = adm.subject_id
+            INNER JOIN `physionet-data.mimiciii_clinical.icustays` icu
+            ON adm.hadm_id = icu.hadm_id
+            WHERE labs.itemid = 50912)
+SELECT hb.subject_id, hb.icustay_id, hb.hadm_id, hb.charttime, hb.admittime, hb.itemid, 
+            hb.valuenum, hb.label, hb.labs_timelag FROM hb 
+            WHERE (hb.labs_timelag > -360 AND  hb.labs_timelag < -3)
+  ")
+
+
+Cr_baseline_all <- query_exec(sql,project=project,use_legacy_sql=FALSE,max_pages = Inf)
+
+#selecting patients that match the ICUstay ID
+Cr_baseline<- Cr_baseline_all %>% filter(icustay_id %in% Admission_final$icustay_id ) 
+
+#Removing the values of Creatinine that are NA = total of 12
+Cr_baseline<-subset(Cr_baseline, ! is.na(Cr_baseline$valuenum))
+
+ 
+#Selecting the most recent Cr value
+Cr_baseline<- Cr_baseline %>% 
+                group_by(icustay_id) %>%
+                slice(which.max(labs_timelag))%>%
+                select(subject_id, icustay_id, charttime, admittime, valuenum, labs_timelag) %>%
+                rename(Cr_baseline_time = charttime, Cr_value_baseline = valuenum,
+                       Cr_base_timelag = labs_timelag)
+
+summary(Cr_baseline$Cr_base_timelag)
+hist(Cr_baseline$Cr_base_timelag)
+
+```
+
+THERE ARE `length(unique(Cr_baseline$subject_id))` PATIENTS WITH AT LEAST ONE VALUE BEFORE ADMISSION 
+
+#SELECTING THE INITIAL Cr VALUE FOR THE COHORT OF PATIENTS 
+```{r}
+#looking for outlayers before selecting the right summary value
+
+boxplot(Cr_baseline$Cr_value_baseline, lab="Creatinine baseline Result")
+
+
+### table of the patients that have CREATINE values greater than 15 to asses if they are really outlayer or not. 
+for (i in 1:length(unique(subset(Cr_baseline, Cr_value_baseline>15)$subject_id))){
+  table<-Cr_baseline_all %>% 
+  filter(subject_id==unique(subset(Cr_baseline, Cr_value_baseline>15)$subject_id)[i]) %>%
+  arrange(labs_timelag) %>%
+  select(subject_id,icustay_id,label,valuenum,labs_timelag) %>%
+  knitr::kable(caption=paste("Extreme Outlier Creatinine, ID:", subset(Cr_baseline, Cr_value_baseline>15)$subject_id[i]))
+  print(table)
+}
+
+
+
+```
+
+
+ 
+
+```{r}
+sql <- paste("
+WITH hb AS
+(SELECT labs.row_id, labs.subject_id,icu.icustay_id, icu.intime, labs.hadm_id, labs.charttime, 
+            adm.admittime, labs.itemid, labs.valuenum, namelab.label,
+            DATETIME_DIFF(labs.charttime ,adm.admittime, MINUTE) AS labs_minutelag,
+            DATETIME_DIFF(labs.charttime ,icu.intime, MINUTE) AS labs_icuminutelag
+            FROM `physionet-data.mimiciii_clinical.labevents` labs
+             INNER JOIN `physionet-data.mimiciii_clinical.d_labitems` namelab
+              ON labs.itemid = namelab.itemid
+            INNER JOIN `physionet-data.mimiciii_clinical.admissions` adm
+            ON labs.subject_id = adm.subject_id
+            INNER JOIN `physionet-data.mimiciii_clinical.icustays` icu
+            ON adm.hadm_id = icu.hadm_id
+            WHERE labs.itemid = 50912)
+SELECT hb.subject_id, hb.icustay_id, hb.hadm_id, hb.charttime, hb.admittime, hb.itemid, 
+            hb.valuenum, hb.label, hb.labs_icuminutelag, hb.labs_minutelag FROM hb
+  WHERE (hb.labs_minutelag >= -1440 AND hb.labs_icuminutelag <= 1440 )
+  ")
+
+
+Cr_initial_all <- query_exec(sql,project=project,use_legacy_sql=FALSE,max_pages = Inf)
+
+#selecting patients that match the ICUstay ID
+Cr_initial<- Cr_initial_all %>% filter(icustay_id %in% Admission_final$icustay_id ) 
+
+#Removing the values of Cr that are NA = total of 17
+sum(is.na(Cr_initial$valuenum))
+Cr_initial<-subset(Cr_initial_all, ! is.na(Cr_initial_all$valuenum))
+#Removing the values of Cr that are 0 
+Cr_initial<-subset(Cr_initial, ! Cr_initial$valuenum==0)
+
+
+#Selecting the Cr value closest to the admission time 
+Cr_initial<- Cr_initial %>% 
+                    group_by(icustay_id) %>%
+                     slice(which.min(abs(labs_minutelag)))
+
+#distribution of times when the Hb was taken and reported 
+hist(Cr_initial$labs_minutelag)
+
+#selecting subgroups of data based on ICU in admission time 
+Cr_initial24h<- Cr_initial %>%
+                      select(subject_id, icustay_id, charttime, valuenum) %>%
+                      rename(Cr_initial_time = charttime, Cr_value_initial = valuenum)
+
+Cr_initial6h<- Cr_initial %>%
+                      filter (labs_icuminutelag <=360) %>%
+                      select(subject_id, icustay_id, charttime, valuenum) %>%
+                      rename(Cr_initial_time = charttime, Cr_value_initial = valuenum)
+
+Cr_initial4h<- Cr_initial %>%
+                      filter (labs_icuminutelag <=240) %>%
+                      select(subject_id, icustay_id, charttime, valuenum) %>%
+                      rename(Cr_initial_time = charttime, Cr_value_initial = valuenum)
+
+Cr_initial2h<- Cr_initial %>%
+                      filter (labs_icuminutelag <=120) %>%
+                      select(subject_id, icustay_id, charttime, valuenum) %>%
+                      rename(Cr_initial_time = charttime, Cr_value_initial = valuenum)
+
+
+#looking for outlayers before selecting the right summary value
+
+boxplot(Cr_initial24h$Cr_value_initial, lab="Cr initial Result")
+
+```
+
+### DATABASE WITH THE BASELINE AND INITAL HEMOGLOBIN VALUES FOR THE PATIENTS THAT HAVE OUR REQUIRED SELECTION CRITERIA  
+```{r}
+
+### merging the data set 
+
+Cr_cohort24h<- merge(Cr_baseline, Cr_initial24h, by=c("subject_id", "icustay_id"))
+Cr_cohort6h<- merge(Cr_baseline, Cr_initial6h, by=c("subject_id", "icustay_id"))
+Cr_cohort4h<- merge(Cr_baseline, Cr_initial4h, by=c("subject_id", "icustay_id"))
+Cr_cohort2h<- merge(Cr_baseline, Cr_initial2h, by=c("subject_id", "icustay_id"))
+
+boxplot(Cr_cohort24h$Cr_value_baseline, Cr_cohort24h$Cr_value_initial, lab="Cr Result")
+
+```
+
+### ADDING THE INFORMATION ABOUT DEMOGRAOHICS 
+
+```{r}
+Masterfile24h<- merge(Cr_cohort24h, Admission_final, by=c("subject_id", "icustay_id"), all.x = TRUE)
+Masterfile6h<- merge(Cr_cohort6h, Admission_final, by=c("subject_id", "icustay_id"), all.x = TRUE)
+Masterfile4h<- merge(Cr_cohort4h, Admission_final, by=c("subject_id", "icustay_id"), all.x = TRUE)
+Masterfile2h<- merge(Cr_cohort2h, Admission_final, by=c("subject_id", "icustay_id"), all.x = TRUE)
+
+```
+
+### SELECTING OTHER RELEVANT LABS 
+```{r}
+
+
+#labs of interest based on the google doc document 
+labs_of_interest<- "(50811, 50855, 51222, 51221, 50810, 51300, 51301, 51265, 50862, 50885, 50882, 50803, 50893, 
+                      50902,50924,50925, 51237, 50952, 50953, 50813, 50954, 51250, 51248, 51249, 50818, 50820,
+                      50970, 50821, 50971, 50976, 51274, 51275, 51279, 51006, 50983, 50998, 51010)"
+sql <- paste("
+WITH all_labs AS
+(SELECT labs.subject_id,icu.icustay_id, icu.intime, labs.hadm_id, labs.charttime, 
+            adm.admittime, labs.itemid, labs.valuenum, namelab.label,
+            DATETIME_DIFF(labs.charttime ,adm.admittime, MINUTE) AS labs_minutelag, 
+            DATETIME_DIFF(labs.charttime ,icu.intime, MINUTE) AS labs_icuminutelag
+            FROM `physionet-data.mimiciii_clinical.labevents` labs
+             INNER JOIN `physionet-data.mimiciii_clinical.d_labitems` namelab
+              ON labs.itemid = namelab.itemid
+            INNER JOIN `physionet-data.mimiciii_clinical.admissions` adm
+            ON labs.subject_id = adm.subject_id
+            INNER JOIN `physionet-data.mimiciii_clinical.icustays` icu
+            ON adm.hadm_id = icu.hadm_id
+            WHERE labs.itemid in", labs_of_interest, ")
+SELECT all_labs.subject_id, all_labs.icustay_id, all_labs.hadm_id, all_labs.charttime, all_labs.admittime,
+            all_labs.itemid, all_labs.valuenum, all_labs.label, all_labs.labs_minutelag, all_labs.labs_icuminutelag
+            FROM all_labs
+            WHERE (all_labs.labs_minutelag >= -1440 AND  all_labs.labs_icuminutelag <= 1440)
+  ")
+
+
+All_labs <- query_exec(sql,project=project,use_legacy_sql=FALSE,max_pages = Inf)
+
+
+#selecting patients that match the ICUstay ID
+All_labs<- All_labs %>% filter(icustay_id %in% Admission_final$icustay_id)
+
+#recoding labs name that have multiple ITEMID codes
+All_labs$label <- recode (All_labs$label, "Calculated Bicarbonate, Whole Blood"= "Bicarbonate", 
+                          "WBC Count" = "White Blood Cells", "Hematocrit, Calculated"= "Hematocrit", 
+                          "Absolute Hemoglobin"= "Hemoglobin")
+
+#Removing values that are 0
+All_labs$valuenum[All_labs$valuenum==0] <- NA
+#Removing the values that are NA
+sum(is.na(All_labs$valuenum))
+All_labs<-subset(All_labs, ! is.na(All_labs$valuenum))
+
+#Selecting the most recent lab value
+All_labs24h<- All_labs %>% 
+                group_by(icustay_id, label) %>%
+                slice(which.min(abs(labs_minutelag))) %>%
+                select(subject_id, icustay_id, label, valuenum)%>%
+                spread(key=label, value=valuenum)
+
+summary(All_labs24h)
+
+
+#Please note in the summary of the data that some of the max and min values are unrealistics and we will have to make adjustments for posible outliers. 
+
+##chechink for outliers
+for (i in 1:length(unique(subset(All_labs24h, Albumin>5.5)$subject_id))) {
+  table<-All_labs %>% 
+  filter(label == "Albumin", subject_id==unique(subset(All_labs24h, Albumin>5.5)$subject_id)[i]) %>%
+  arrange(labs_minutelag) %>%
+  select(subject_id,icustay_id,label,valuenum,labs_minutelag) %>%
+  knitr::kable(caption=paste("Extreme Outlier Albumin, ID:", unique(subset(All_labs24h,
+                                                                           Albumin>5.5)$subject_id[i])))
+  print(table)
+}
+
+for (i in 1:length(unique(subset(All_labs24h, `Bilirubin, Total`>60)$subject_id))) {
+  table<-All_labs %>% 
+  filter(label == "Bilirubin, Total", subject_id==unique(subset(All_labs24h,`Bilirubin, Total`>60)$subject_id)[i]) %>%
+  arrange(labs_minutelag) %>%
+  select(subject_id,icustay_id,label,valuenum,labs_minutelag) %>%
+  knitr::kable(caption=paste("Extreme Outlier Albumin, ID:", unique(subset(All_labs24h,
+                                                                           `Bilirubin, Total`>60)$subject_id[i])))
+  print(table)
+}
+
+All_labs24h$Ferritin
+
+for (i in 1:length(unique(subset(All_labs24h, Ferritin>3000)$subject_id))) {
+  table<-All_labs %>% 
+  filter(label == "Ferritin", subject_id==unique(subset(All_labs24h,Ferritin>3000)$subject_id)[i]) %>%
+  arrange(labs_minutelag) %>%
+  select(subject_id,icustay_id,label,valuenum,labs_minutelag) %>%
+  knitr::kable(caption=paste("Extreme Outlier Albumin, ID:", unique(subset(All_labs24h,
+                                                                           Ferritin>3000)$subject_id[i])))
+  print(table)
+}
+
+
+
+#selecting subgroups of data based on ICU in admission time 
+Labs_6h<- All_labs %>%
+          filter(labs_icuminutelag<=360) %>%
+          group_by(icustay_id, label) %>%
+          slice(which.min(abs(labs_minutelag))) %>%
+          select(subject_id, icustay_id, label, valuenum)%>%
+          spread(key=label, value=valuenum)
+
+
+Labs_4h<- All_labs %>%
+          filter(labs_icuminutelag<=240) %>%
+          group_by(icustay_id, label) %>%
+          slice(which.min(abs(labs_minutelag))) %>%
+          select(subject_id, icustay_id, label, valuenum)%>%
+          spread(key=label, value=valuenum)
+
+Labs_2h<- All_labs %>%
+          filter(labs_icuminutelag<=120) %>%
+          group_by(icustay_id, label) %>%
+          slice(which.min(abs(labs_minutelag))) %>%
+          select(subject_id, icustay_id, label, valuenum)%>%
+          spread(key=label, value=valuenum)
+
+
+```
+### ADDING THE INFORMATION ABOUT OTHER LABORATORY VALUES  
+
+```{r}
+Masterfile24h<- merge(Masterfile24h, All_labs24h, by=c("subject_id", "icustay_id"), all.x = TRUE)
+Masterfile6h<- merge(Masterfile6h, Labs_6h, by=c("subject_id", "icustay_id"), all.x = TRUE)
+Masterfile4h<- merge(Masterfile4h, Labs_4h, by=c("subject_id", "icustay_id"), all.x = TRUE)
+Masterfile2h<- merge(Masterfile2h, Labs_2h, by=c("subject_id", "icustay_id"), all.x = TRUE)
+
+
+```
+### SELECTING vITAL SIGNS WITHING THE FIRTS DAY OF ICU ADMISSION 
+```{r}
+#Vitals of interest based on the google doc document 
+vitals_of_interest<- "(211, 220045, 51, 442, 455, 6701, 220179, 220050, 8368, 8440, 8441, 8555, 220180,
+                      220051, 456, 52, 6702, 443, 220052, 220181, 225312, 618, 615, 220210, 224690,
+                      646, 220277, 807, 811, 1529, 3745, 3744, 225664, 220621, 226537, 223762, 676,
+                      223761, 678) "
+sql <- paste("
+WITH vitals AS
+(SELECT ce.subject_id,icu.icustay_id, icu.intime, ce.hadm_id, ce.charttime, 
+            adm.admittime, ce.itemid, ce.valuenum, namece.label,
+            DATETIME_DIFF(ce.charttime, icu.intime, MINUTE) AS ce_minutelag
+            FROM `physionet-data.mimiciii_clinical.chartevents` ce
+             INNER JOIN `physionet-data.mimiciii_clinical.d_items` namece
+              ON ce.itemid = namece.itemid
+            INNER JOIN `physionet-data.mimiciii_clinical.admissions` adm
+            ON ce.subject_id = adm.subject_id
+            INNER JOIN `physionet-data.mimiciii_clinical.icustays` icu
+            ON adm.hadm_id = icu.hadm_id
+            WHERE ce.itemid in", vitals_of_interest ,")
+SELECT vitals.subject_id, vitals.icustay_id, vitals.hadm_id, vitals.charttime, vitals.admittime,
+            vitals.itemid, vitals.valuenum, vitals.label, vitals.ce_minutelag FROM vitals
+  WHERE (vitals.ce_minutelag >= -1440 AND  vitals.ce_minutelag <= 1440)
+  ")
+
+
+vitals <- query_exec(sql,project=project,use_legacy_sql=FALSE,max_pages = Inf)
+
+#selecting patients that match the ICUstay ID
+vitals<- vitals %>% filter(icustay_id %in% Admission_final$icustay_id)
+
+#Recoding Temperature values to centigrades
+vitals$values <- ifelse(vitals$itemid %in% c(223761,678), (vitals$valuenum-32)/1.8, vitals$valuenum)
+
+
+#recoding vitals name that have multiple ITEMID codes
+vitals$LABELS <- ifelse(vitals$itemid %in% c(211,220045), "HR", 
+                        ifelse(vitals$itemid %in% c(51,442,455,6701,220179,220050), "SBP",
+                        ifelse(vitals$itemid %in% c(8368,8440,8441,8555,220180,220051), "DBP",
+                        ifelse(vitals$itemid %in% c(456,52,6702,443,220052,220181,225312),"MAP", 
+                        ifelse(vitals$itemid %in% c(618,615,220210,224690), "RR", 
+                        ifelse(vitals$itemid %in% c(646,220277), "SPO2", 
+                        ifelse(vitals$itemid %in% c(807,811,1529,3745,3744,225664,220621,226537), "GLU",
+                        ifelse(vitals$itemid %in% c(223762,676,223761,678), "TEMP", "ERROR"))))))))
+                        
+  
+#Removing EXTREM VALUEES - the values that are NA 
+vitals$values <- ifelse(vitals$LABELS=="HR" & (vitals$valuenum<=0|vitals$valuenum>300), NA, 
+                        ifelse(vitals$LABELS=="SBP" & (vitals$valuenum<=0|vitals$valuenum>400), NA,
+                        ifelse(vitals$LABELS=="DBP" & (vitals$valuenum<=0|vitals$valuenum>300), NA,
+                        ifelse(vitals$LABELS=="MAP" & (vitals$valuenum<=0|vitals$valuenum>300), NA,
+                        ifelse(vitals$LABELS=="RR" & (vitals$valuenum<=0|vitals$valuenum>70), NA,
+                        ifelse(vitals$LABELS=="SPO2" & (vitals$valuenum<=0|vitals$valuenum > 100), NA,
+                        ifelse(vitals$LABELS=="GLU" & (vitals$valuenum<=0|vitals$valuenum>1000), NA,
+                        ifelse(vitals$LABELS=="TEMP" & (vitals$values<=0|vitals$values>50), NA,
+                               vitals$values))))))))
+
+sum(is.na(vitals$valuenum))
+sum(is.na(vitals$values))
+
+vitals<-subset(vitals, ! is.na(vitals$values))
+  
+#Summarizing the values of the vitals signs 
+
+vitals24<- vitals %>%
+          select(subject_id, icustay_id, LABELS, values) %>%
+          group_by(icustay_id, LABELS) %>%
+          summarise(mean=mean(values), sd=sd(values), max=max(values), min=min(values)) %>% 
+          gather(variable, value, -(icustay_id:LABELS)) %>%
+          unite(temp, LABELS, variable) %>%
+          spread(temp, value)
+
+vitals6<- vitals %>%
+          filter(ce_minutelag<=360) %>%
+          select(subject_id, icustay_id, LABELS, values) %>%
+          group_by(icustay_id, LABELS) %>%
+          summarise(mean=mean(values), sd=sd(values), max=max(values), min=min(values)) %>% 
+          gather(variable, value, -(icustay_id:LABELS)) %>%
+          unite(temp, LABELS, variable) %>%
+          spread(temp, value)
+
+vitals4<- vitals %>%
+          filter(ce_minutelag<=240) %>%
+          select(subject_id, icustay_id, LABELS, values) %>%
+          group_by(icustay_id, LABELS) %>%
+          summarise(mean=mean(values), sd=sd(values), max=max(values), min=min(values)) %>% 
+          gather(variable, value, -(icustay_id:LABELS)) %>%
+          unite(temp, LABELS, variable) %>%
+          spread(temp, value)
+
+vitals2<- vitals %>%
+          filter(ce_minutelag<=120) %>%
+          select(subject_id, icustay_id, LABELS, values) %>%
+          group_by(icustay_id, LABELS) %>%
+          summarise(mean=mean(values), sd=sd(values), max=max(values), min=min(values)) %>% 
+          gather(variable, value, -(icustay_id:LABELS)) %>%
+          unite(temp, LABELS, variable) %>%
+          spread(temp, value)
+
+    
+summary(vitals2)
+vitals$LABELS
+
+#######PENDING TO REVIEW
+#####checking the values that have missing at 2 hr
+for (i in 1:length(subset(vitals2, is.na(HR_mean))$subject_id)) {
+  table<-vitals %>% 
+  filter(LABELS == "HR", subject_id==subset(vitals2, is.na(HR_mean))$subject_id[i]) %>%
+  arrange(ce_minutelag) %>%
+  select(subject_id,icustay_id,LABELS,valuenum,ce_minutelag) %>%
+  knitr::kable(caption=paste("Extreme Outlier Albumin, ID:", subset(vitals2, is.na(HR_mean))$subject_id[i]))
+  print(table)
+}
+
+
+
+```
+
+
+### ADDING THE INFORMATION ABOUT OTHER VITALS TO THE MASTER FILE   
+
+```{r}
+Masterfile24h<- merge(Masterfile24h, vitals24, by="icustay_id", all.x = TRUE)
+Masterfile6h<- merge(Masterfile6h, vitals6, by="icustay_id", all.x = TRUE)
+Masterfile4h<- merge(Masterfile4h, vitals4, by="icustay_id", all.x = TRUE)
+Masterfile2h<- merge(Masterfile2h, vitals2, by="icustay_id", all.x = TRUE)
+
+
+```
+
+
+### SELECTING VASOPRESSORS 
+
+```{r}
+
+
+
+#selecting patients that match the ICUstay ID , and filtering time of event 
+
+vassopressors<- vassopressors %>% filter(icustay_id %in% Admission_final$icustay_id, ce_minutelag<=1440)
+
+vp24<- vassopressors %>%
+          select(subject_id, icustay_id) %>%
+          group_by(icustay_id) %>%
+          mutate(vassopresor_doses= n())%>%
+          unique()
+
+vp6<- vassopressors %>%
+          filter(ce_minutelag<=360) %>%
+          select(subject_id, icustay_id) %>%
+          group_by(icustay_id) %>%
+          mutate(vassopresor_doses= n())%>%
+          unique()
+
+vp4<- vassopressors %>%
+          filter(ce_minutelag<=240) %>%
+          select(subject_id, icustay_id) %>%
+          group_by(icustay_id) %>%
+          mutate(vassopresor_doses= n())%>%
+          unique()
+
+vp2<- vassopressors %>%
+          filter(ce_minutelag<=120) %>%
+          select(subject_id, icustay_id) %>%
+          group_by(icustay_id) %>%
+          mutate(vassopresor_doses= n()) %>%
+          unique()
+
+
+```
+
+```{r}
+vassopressors_mv<- "(221906, 221749, 222315, 221289, 221986, 221662, 221653) "
+
+sql <- paste("
+SELECT  icu.subject_id, icu.icustay_id, icu.intime, mv.itemid, mv.starttime, mv.endtime, mv.amount, mv.amountuom, mv. rate,
+DATETIME_DIFF(mv.starttime, icu.intime, MINUTE) AS ce_minutelag
+FROM `physionet-data.mimiciii_clinical.inputevents_mv` mv
+INNER JOIN `physionet-data.mimiciii_clinical.icustays` icu
+ON mv.icustay_id = icu.icustay_id
+WHERE itemid in", vassopressors_mv)
+
+vassopressors <- query_exec(sql,project=project,use_legacy_sql=FALSE,max_pages = Inf)
+```
+
+### ADDING THE INFORMATION ABOUT OTHER VP TO THE MASTER FILE   
+
+```{r}
+Masterfile24h<- merge(Masterfile24h, vp24, by=c("subject_id", "icustay_id"), all.x = TRUE)
+Masterfile6h<- merge(Masterfile6h, vp6, by=c("subject_id", "icustay_id"), all.x = TRUE)
+Masterfile4h<- merge(Masterfile4h, vp4, by=c("subject_id", "icustay_id"), all.x = TRUE)
+Masterfile2h<- merge(Masterfile2h, vp2, by=c("subject_id", "icustay_id"), all.x = TRUE)
+
+
+
+write.csv(Masterfile24h, "C:/Users/ch162944/Dropbox (Berde Lab)/HST.953/CR_Masterfile24h.csv" )
+write.csv(Masterfile6h, "C:/Users/ch162944/Dropbox (Berde Lab)/HST.953/CR_Masterfile6h.csv" )
+write.csv(Masterfile4h, "C:/Users/ch162944/Dropbox (Berde Lab)/HST.953/CR_Masterfile4h.csv" )
+write.csv(Masterfile2h, "C:/Users/ch162944/Dropbox (Berde Lab)/HST.953/CR_Masterfile2h.csv" )
+
+
+
+
+```
+
+

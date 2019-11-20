@@ -1,0 +1,1393 @@
+,Feature,Importance,Model,Unnamed: 0,seed,target
+0,Hem_base_timelag,0.003220444125072188,RFC,0.0,1,target_baseline
+1,Hb_value_initial,0.7435108187751182,RFC,1.0,1,target_baseline
+2,ageatadmin,0.002813617909337891,RFC,2.0,1,target_baseline
+3,Albumin,0.008431086852891623,RFC,3.0,1,target_baseline
+4,Bicarbonate,0.0012491808814102962,RFC,4.0,1,target_baseline
+5,"Bilirubin, Total",0.003773206165799282,RFC,5.0,1,target_baseline
+6,"Calcium, Total",0.005331187016528793,RFC,6.0,1,target_baseline
+7,Chloride,0.01651071318642933,RFC,7.0,1,target_baseline
+8,Creatinine,0.006130209632783085,RFC,8.0,1,target_baseline
+9,INR(PT),0.0020689276908655713,RFC,9.0,1,target_baseline
+10,Lactate,0.0034149589048882607,RFC,10.0,1,target_baseline
+11,Lactate Dehydrogenase (LD),0.016030784114392106,RFC,11.0,1,target_baseline
+12,MCHC,0.06459564215731926,RFC,12.0,1,target_baseline
+13,pCO2,0.002798191007492666,RFC,13.0,1,target_baseline
+14,pH,0.001776001040724011,RFC,14.0,1,target_baseline
+15,Phosphate,0.002655560095194536,RFC,15.0,1,target_baseline
+16,Platelet Count,0.007690902128725086,RFC,16.0,1,target_baseline
+17,pO2,0.009533995519951582,RFC,17.0,1,target_baseline
+18,Potassium,0.004076776282952757,RFC,18.0,1,target_baseline
+19,PTT,0.001896376678184384,RFC,19.0,1,target_baseline
+20,Red Blood Cells,0.0041594936994874395,RFC,20.0,1,target_baseline
+21,Sodium,0.002192538722619858,RFC,21.0,1,target_baseline
+22,Urea Nitrogen,0.011147186332467642,RFC,22.0,1,target_baseline
+23,White Blood Cells,0.012300068237534536,RFC,23.0,1,target_baseline
+24,DBP_max,0.0015422062145205515,RFC,24.0,1,target_baseline
+25,DBP_mean,0.002186502886618113,RFC,25.0,1,target_baseline
+26,DBP_min,0.0015953458904443632,RFC,26.0,1,target_baseline
+27,DBP_sd,0.001946712947430898,RFC,27.0,1,target_baseline
+28,GLU_max,0.002496947355069557,RFC,28.0,1,target_baseline
+29,GLU_mean,0.0015584157859450875,RFC,29.0,1,target_baseline
+30,GLU_min,0.001931808091744224,RFC,30.0,1,target_baseline
+31,GLU_sd,0.0021915304752422784,RFC,31.0,1,target_baseline
+32,HR_max,0.0025492427981868826,RFC,32.0,1,target_baseline
+33,HR_mean,0.0019515561915009695,RFC,33.0,1,target_baseline
+34,HR_min,0.0021832067177852466,RFC,34.0,1,target_baseline
+35,HR_sd,0.001657283366173833,RFC,35.0,1,target_baseline
+36,RR_max,0.0010292434080756518,RFC,36.0,1,target_baseline
+37,RR_mean,0.009087598646396652,RFC,37.0,1,target_baseline
+38,RR_min,0.0037301379198578853,RFC,38.0,1,target_baseline
+39,RR_sd,0.0014760568042713332,RFC,39.0,1,target_baseline
+40,SBP_max,0.001809950283646916,RFC,40.0,1,target_baseline
+41,SBP_mean,0.0014594505478052124,RFC,41.0,1,target_baseline
+42,SBP_min,0.0019261290218432218,RFC,42.0,1,target_baseline
+43,SBP_sd,0.0018877586129209523,RFC,43.0,1,target_baseline
+44,SPO2_max,0.0008047174509159674,RFC,44.0,1,target_baseline
+45,SPO2_mean,0.0012368636755807302,RFC,45.0,1,target_baseline
+46,SPO2_min,0.0009994239370887366,RFC,46.0,1,target_baseline
+47,SPO2_sd,0.0013238637211005148,RFC,47.0,1,target_baseline
+48,TEMP_max,0.0009686586050984347,RFC,48.0,1,target_baseline
+49,TEMP_mean,0.0009599731803301067,RFC,49.0,1,target_baseline
+50,TEMP_min,0.0010416955023970038,RFC,50.0,1,target_baseline
+51,TEMP_sd,0.0028267897048300642,RFC,51.0,1,target_baseline
+52,vassopresor_doses,0.0,RFC,52.0,1,target_baseline
+53,is_female,0.0061574103296544325,RFC,53.0,1,target_baseline
+54,ethnicity_ASIAN,0.0,RFC,54.0,1,target_baseline
+55,ethnicity_BLACK,3.270799497041387e-05,RFC,55.0,1,target_baseline
+56,ethnicity_HISPANIC,0.0,RFC,56.0,1,target_baseline
+57,ethnicity_OTHER,0.0,RFC,57.0,1,target_baseline
+58,ethnicity_WHITE,0.00014294477438281971,RFC,58.0,1,target_baseline
+59,Hem_base_timelag,0.003477390195508297,RFC,0.0,5,target_baseline
+60,Hb_value_initial,0.7403591725940504,RFC,1.0,5,target_baseline
+61,ageatadmin,0.001659889513099693,RFC,2.0,5,target_baseline
+62,Albumin,0.005384129594470036,RFC,3.0,5,target_baseline
+63,Bicarbonate,0.001435770224694412,RFC,4.0,5,target_baseline
+64,"Bilirubin, Total",0.003503048673653749,RFC,5.0,5,target_baseline
+65,"Calcium, Total",0.0076996609657788186,RFC,6.0,5,target_baseline
+66,Chloride,0.019635888167434275,RFC,7.0,5,target_baseline
+67,Creatinine,0.007260372581174052,RFC,8.0,5,target_baseline
+68,INR(PT),0.0024183401215049968,RFC,9.0,5,target_baseline
+69,Lactate,0.006659399445990355,RFC,10.0,5,target_baseline
+70,Lactate Dehydrogenase (LD),0.009718234563589305,RFC,11.0,5,target_baseline
+71,MCHC,0.0659532146308687,RFC,12.0,5,target_baseline
+72,pCO2,0.0021216143383717954,RFC,13.0,5,target_baseline
+73,pH,0.0022918950969961927,RFC,14.0,5,target_baseline
+74,Phosphate,0.002004507117110629,RFC,15.0,5,target_baseline
+75,Platelet Count,0.007010833178028887,RFC,16.0,5,target_baseline
+76,pO2,0.013523586266704937,RFC,17.0,5,target_baseline
+77,Potassium,0.0025602093883755877,RFC,18.0,5,target_baseline
+78,PTT,0.002136927159765288,RFC,19.0,5,target_baseline
+79,Red Blood Cells,0.004343977336245477,RFC,20.0,5,target_baseline
+80,Sodium,0.002923558366194477,RFC,21.0,5,target_baseline
+81,Urea Nitrogen,0.013101813891655023,RFC,22.0,5,target_baseline
+82,White Blood Cells,0.011480360061618929,RFC,23.0,5,target_baseline
+83,DBP_max,0.0017994216241508446,RFC,24.0,5,target_baseline
+84,DBP_mean,0.0017810592843237308,RFC,25.0,5,target_baseline
+85,DBP_min,0.001426863952919123,RFC,26.0,5,target_baseline
+86,DBP_sd,0.0015005945717104664,RFC,27.0,5,target_baseline
+87,GLU_max,0.0016050499264785199,RFC,28.0,5,target_baseline
+88,GLU_mean,0.0013633079809583866,RFC,29.0,5,target_baseline
+89,GLU_min,0.0022135417955098393,RFC,30.0,5,target_baseline
+90,GLU_sd,0.001857222178001848,RFC,31.0,5,target_baseline
+91,HR_max,0.0023766129082219713,RFC,32.0,5,target_baseline
+92,HR_mean,0.001807536569714627,RFC,33.0,5,target_baseline
+93,HR_min,0.0019318430764314774,RFC,34.0,5,target_baseline
+94,HR_sd,0.0018927808760381415,RFC,35.0,5,target_baseline
+95,RR_max,0.0009452496785858767,RFC,36.0,5,target_baseline
+96,RR_mean,0.011085718331375085,RFC,37.0,5,target_baseline
+97,RR_min,0.0030884131231059546,RFC,38.0,5,target_baseline
+98,RR_sd,0.0013990059385934664,RFC,39.0,5,target_baseline
+99,SBP_max,0.001655016357289344,RFC,40.0,5,target_baseline
+100,SBP_mean,0.0013883525018647494,RFC,41.0,5,target_baseline
+101,SBP_min,0.001446938920359905,RFC,42.0,5,target_baseline
+102,SBP_sd,0.0021098220886112263,RFC,43.0,5,target_baseline
+103,SPO2_max,0.0009517378174764486,RFC,44.0,5,target_baseline
+104,SPO2_mean,0.001035788158517674,RFC,45.0,5,target_baseline
+105,SPO2_min,0.0008102983690145597,RFC,46.0,5,target_baseline
+106,SPO2_sd,0.0010111181939156005,RFC,47.0,5,target_baseline
+107,TEMP_max,0.0012029481398740812,RFC,48.0,5,target_baseline
+108,TEMP_mean,0.000977099448707922,RFC,49.0,5,target_baseline
+109,TEMP_min,0.0012386497651295258,RFC,50.0,5,target_baseline
+110,TEMP_sd,0.004542777740359979,RFC,51.0,5,target_baseline
+111,vassopresor_doses,0.0,RFC,52.0,5,target_baseline
+112,is_female,0.004735160348603299,RFC,53.0,5,target_baseline
+113,ethnicity_ASIAN,0.0,RFC,54.0,5,target_baseline
+114,ethnicity_BLACK,4.837904519612653e-05,RFC,55.0,5,target_baseline
+115,ethnicity_HISPANIC,0.0,RFC,56.0,5,target_baseline
+116,ethnicity_OTHER,1.0598311056463133e-05,RFC,57.0,5,target_baseline
+117,ethnicity_WHITE,9.72995050196374e-05,RFC,58.0,5,target_baseline
+118,Hem_base_timelag,0.003541158418007043,RFC,0.0,10,target_baseline
+119,Hb_value_initial,0.7383342311815291,RFC,1.0,10,target_baseline
+120,ageatadmin,0.0020418784924930225,RFC,2.0,10,target_baseline
+121,Albumin,0.008297086038784311,RFC,3.0,10,target_baseline
+122,Bicarbonate,0.0014172219171195491,RFC,4.0,10,target_baseline
+123,"Bilirubin, Total",0.003608073836153953,RFC,5.0,10,target_baseline
+124,"Calcium, Total",0.006500231861004682,RFC,6.0,10,target_baseline
+125,Chloride,0.021593281449138937,RFC,7.0,10,target_baseline
+126,Creatinine,0.008289810155005118,RFC,8.0,10,target_baseline
+127,INR(PT),0.0015883785551264562,RFC,9.0,10,target_baseline
+128,Lactate,0.0051260128179397785,RFC,10.0,10,target_baseline
+129,Lactate Dehydrogenase (LD),0.014687342393490009,RFC,11.0,10,target_baseline
+130,MCHC,0.06256221706077866,RFC,12.0,10,target_baseline
+131,pCO2,0.002309463685510293,RFC,13.0,10,target_baseline
+132,pH,0.0016249199964304805,RFC,14.0,10,target_baseline
+133,Phosphate,0.001423650953973023,RFC,15.0,10,target_baseline
+134,Platelet Count,0.009371252517619576,RFC,16.0,10,target_baseline
+135,pO2,0.015038502734560944,RFC,17.0,10,target_baseline
+136,Potassium,0.0034047899408154825,RFC,18.0,10,target_baseline
+137,PTT,0.0018400841183164427,RFC,19.0,10,target_baseline
+138,Red Blood Cells,0.004540545929303249,RFC,20.0,10,target_baseline
+139,Sodium,0.0031273977430162692,RFC,21.0,10,target_baseline
+140,Urea Nitrogen,0.013468494495816368,RFC,22.0,10,target_baseline
+141,White Blood Cells,0.009169095198137949,RFC,23.0,10,target_baseline
+142,DBP_max,0.0015548953109936054,RFC,24.0,10,target_baseline
+143,DBP_mean,0.0011515319470966992,RFC,25.0,10,target_baseline
+144,DBP_min,0.0013349124066153115,RFC,26.0,10,target_baseline
+145,DBP_sd,0.0017122274316870875,RFC,27.0,10,target_baseline
+146,GLU_max,0.0017713497574464634,RFC,28.0,10,target_baseline
+147,GLU_mean,0.0014099497168660938,RFC,29.0,10,target_baseline
+148,GLU_min,0.0023154789999003307,RFC,30.0,10,target_baseline
+149,GLU_sd,0.002061526622624225,RFC,31.0,10,target_baseline
+150,HR_max,0.0019356535647999914,RFC,32.0,10,target_baseline
+151,HR_mean,0.0020032311482577185,RFC,33.0,10,target_baseline
+152,HR_min,0.002112406757976107,RFC,34.0,10,target_baseline
+153,HR_sd,0.0018770619739444184,RFC,35.0,10,target_baseline
+154,RR_max,0.001058493969254736,RFC,36.0,10,target_baseline
+155,RR_mean,0.008912244845004351,RFC,37.0,10,target_baseline
+156,RR_min,0.003105280088855286,RFC,38.0,10,target_baseline
+157,RR_sd,0.0016973123418427987,RFC,39.0,10,target_baseline
+158,SBP_max,0.0014971693829725016,RFC,40.0,10,target_baseline
+159,SBP_mean,0.0011466498345743265,RFC,41.0,10,target_baseline
+160,SBP_min,0.0013438019380780616,RFC,42.0,10,target_baseline
+161,SBP_sd,0.0022914858714515518,RFC,43.0,10,target_baseline
+162,SPO2_max,0.0015834333740477608,RFC,44.0,10,target_baseline
+163,SPO2_mean,0.0010884466607224183,RFC,45.0,10,target_baseline
+164,SPO2_min,0.0008294153259957512,RFC,46.0,10,target_baseline
+165,SPO2_sd,0.0012957995045421195,RFC,47.0,10,target_baseline
+166,TEMP_max,0.0009404970437127732,RFC,48.0,10,target_baseline
+167,TEMP_mean,0.0009551100301030072,RFC,49.0,10,target_baseline
+168,TEMP_min,0.0010862651912830782,RFC,50.0,10,target_baseline
+169,TEMP_sd,0.002935442291130812,RFC,51.0,10,target_baseline
+170,vassopresor_doses,0.0,RFC,52.0,10,target_baseline
+171,is_female,0.0040012109479995814,RFC,53.0,10,target_baseline
+172,ethnicity_ASIAN,0.0,RFC,54.0,10,target_baseline
+173,ethnicity_BLACK,7.20809178206919e-06,RFC,55.0,10,target_baseline
+174,ethnicity_HISPANIC,0.0,RFC,56.0,10,target_baseline
+175,ethnicity_OTHER,0.0,RFC,57.0,10,target_baseline
+176,ethnicity_WHITE,7.938613836785752e-05,RFC,58.0,10,target_baseline
+177,Hem_base_timelag,0.0038538827757051658,RFC,0.0,15,target_baseline
+178,Hb_value_initial,0.7355571291008937,RFC,1.0,15,target_baseline
+179,ageatadmin,0.0029178075657673784,RFC,2.0,15,target_baseline
+180,Albumin,0.00567985491053042,RFC,3.0,15,target_baseline
+181,Bicarbonate,0.001391230584193305,RFC,4.0,15,target_baseline
+182,"Bilirubin, Total",0.0050747869645559095,RFC,5.0,15,target_baseline
+183,"Calcium, Total",0.0070427796814349795,RFC,6.0,15,target_baseline
+184,Chloride,0.014246293475864709,RFC,7.0,15,target_baseline
+185,Creatinine,0.0059679954253793925,RFC,8.0,15,target_baseline
+186,INR(PT),0.002157215888856932,RFC,9.0,15,target_baseline
+187,Lactate,0.002969821808927225,RFC,10.0,15,target_baseline
+188,Lactate Dehydrogenase (LD),0.0124550114078257,RFC,11.0,15,target_baseline
+189,MCHC,0.06469214534228035,RFC,12.0,15,target_baseline
+190,pCO2,0.0020078423179268725,RFC,13.0,15,target_baseline
+191,pH,0.0014734046675719556,RFC,14.0,15,target_baseline
+192,Phosphate,0.0018322280249042375,RFC,15.0,15,target_baseline
+193,Platelet Count,0.01030338844413598,RFC,16.0,15,target_baseline
+194,pO2,0.016078150282024146,RFC,17.0,15,target_baseline
+195,Potassium,0.0027953821488392594,RFC,18.0,15,target_baseline
+196,PTT,0.0021806396612660773,RFC,19.0,15,target_baseline
+197,Red Blood Cells,0.0037694939213015217,RFC,20.0,15,target_baseline
+198,Sodium,0.0025141485699461514,RFC,21.0,15,target_baseline
+199,Urea Nitrogen,0.015431288744455594,RFC,22.0,15,target_baseline
+200,White Blood Cells,0.01171515208314695,RFC,23.0,15,target_baseline
+201,DBP_max,0.001842309303168443,RFC,24.0,15,target_baseline
+202,DBP_mean,0.0018462987161500567,RFC,25.0,15,target_baseline
+203,DBP_min,0.0011314695093513224,RFC,26.0,15,target_baseline
+204,DBP_sd,0.001418940616284849,RFC,27.0,15,target_baseline
+205,GLU_max,0.0017709840046578023,RFC,28.0,15,target_baseline
+206,GLU_mean,0.0015078607672582138,RFC,29.0,15,target_baseline
+207,GLU_min,0.002466793013133675,RFC,30.0,15,target_baseline
+208,GLU_sd,0.0020884939239600255,RFC,31.0,15,target_baseline
+209,HR_max,0.001913296145688379,RFC,32.0,15,target_baseline
+210,HR_mean,0.0025657564581902394,RFC,33.0,15,target_baseline
+211,HR_min,0.002510059267790675,RFC,34.0,15,target_baseline
+212,HR_sd,0.0019086115858105235,RFC,35.0,15,target_baseline
+213,RR_max,0.0012128819829759652,RFC,36.0,15,target_baseline
+214,RR_mean,0.012134374335235128,RFC,37.0,15,target_baseline
+215,RR_min,0.0042877830579073056,RFC,38.0,15,target_baseline
+216,RR_sd,0.0015984126448333172,RFC,39.0,15,target_baseline
+217,SBP_max,0.0021197126846197734,RFC,40.0,15,target_baseline
+218,SBP_mean,0.0017360630927144767,RFC,41.0,15,target_baseline
+219,SBP_min,0.0015711546197052892,RFC,42.0,15,target_baseline
+220,SBP_sd,0.0019092919286704414,RFC,43.0,15,target_baseline
+221,SPO2_max,0.0007545689722577889,RFC,44.0,15,target_baseline
+222,SPO2_mean,0.001349715126664366,RFC,45.0,15,target_baseline
+223,SPO2_min,0.000667300389042134,RFC,46.0,15,target_baseline
+224,SPO2_sd,0.0013564045071219615,RFC,47.0,15,target_baseline
+225,TEMP_max,0.0009905411609203462,RFC,48.0,15,target_baseline
+226,TEMP_mean,0.0006077682014721695,RFC,49.0,15,target_baseline
+227,TEMP_min,0.0009159365681151828,RFC,50.0,15,target_baseline
+228,TEMP_sd,0.0042954957500395425,RFC,51.0,15,target_baseline
+229,vassopresor_doses,0.0,RFC,52.0,15,target_baseline
+230,is_female,0.005360705546084753,RFC,53.0,15,target_baseline
+231,ethnicity_ASIAN,0.0,RFC,54.0,15,target_baseline
+232,ethnicity_BLACK,5.696908530331287e-06,RFC,55.0,15,target_baseline
+233,ethnicity_HISPANIC,0.0,RFC,56.0,15,target_baseline
+234,ethnicity_OTHER,2.2656339070371943e-06,RFC,57.0,15,target_baseline
+235,ethnicity_WHITE,4.597978000454796e-05,RFC,58.0,15,target_baseline
+236,Hem_base_timelag,0.0035391008239100226,RFC,0.0,20,target_baseline
+237,Hb_value_initial,0.7381061549218322,RFC,1.0,20,target_baseline
+238,ageatadmin,0.002891407753798433,RFC,2.0,20,target_baseline
+239,Albumin,0.008378405999793226,RFC,3.0,20,target_baseline
+240,Bicarbonate,0.0015031587163869533,RFC,4.0,20,target_baseline
+241,"Bilirubin, Total",0.0040521230332836375,RFC,5.0,20,target_baseline
+242,"Calcium, Total",0.007956143940186738,RFC,6.0,20,target_baseline
+243,Chloride,0.013887427059311928,RFC,7.0,20,target_baseline
+244,Creatinine,0.0065532073711021535,RFC,8.0,20,target_baseline
+245,INR(PT),0.0021243368278640344,RFC,9.0,20,target_baseline
+246,Lactate,0.005920428968334311,RFC,10.0,20,target_baseline
+247,Lactate Dehydrogenase (LD),0.01076797700048247,RFC,11.0,20,target_baseline
+248,MCHC,0.07088378903985906,RFC,12.0,20,target_baseline
+249,pCO2,0.0021258891201347226,RFC,13.0,20,target_baseline
+250,pH,0.001654778071462567,RFC,14.0,20,target_baseline
+251,Phosphate,0.002326241102583362,RFC,15.0,20,target_baseline
+252,Platelet Count,0.008190447235456795,RFC,16.0,20,target_baseline
+253,pO2,0.009228904365450407,RFC,17.0,20,target_baseline
+254,Potassium,0.004013961347105265,RFC,18.0,20,target_baseline
+255,PTT,0.0017544079707881384,RFC,19.0,20,target_baseline
+256,Red Blood Cells,0.003726761389967496,RFC,20.0,20,target_baseline
+257,Sodium,0.003424170423946897,RFC,21.0,20,target_baseline
+258,Urea Nitrogen,0.00974016265289118,RFC,22.0,20,target_baseline
+259,White Blood Cells,0.010205233185746366,RFC,23.0,20,target_baseline
+260,DBP_max,0.0013422290995502234,RFC,24.0,20,target_baseline
+261,DBP_mean,0.0011543536077714782,RFC,25.0,20,target_baseline
+262,DBP_min,0.0012506213068162024,RFC,26.0,20,target_baseline
+263,DBP_sd,0.0017527675448023752,RFC,27.0,20,target_baseline
+264,GLU_max,0.00214903922043019,RFC,28.0,20,target_baseline
+265,GLU_mean,0.0013920310500908572,RFC,29.0,20,target_baseline
+266,GLU_min,0.002391454113348376,RFC,30.0,20,target_baseline
+267,GLU_sd,0.00174997224693119,RFC,31.0,20,target_baseline
+268,HR_max,0.0026009871612363558,RFC,32.0,20,target_baseline
+269,HR_mean,0.0017878563308415887,RFC,33.0,20,target_baseline
+270,HR_min,0.0017808263552548684,RFC,34.0,20,target_baseline
+271,HR_sd,0.0018793157201429176,RFC,35.0,20,target_baseline
+272,RR_max,0.001194411518028641,RFC,36.0,20,target_baseline
+273,RR_mean,0.01788956225419447,RFC,37.0,20,target_baseline
+274,RR_min,0.002512754278124901,RFC,38.0,20,target_baseline
+275,RR_sd,0.0014154297670099071,RFC,39.0,20,target_baseline
+276,SBP_max,0.0013067243627783382,RFC,40.0,20,target_baseline
+277,SBP_mean,0.001058240554448261,RFC,41.0,20,target_baseline
+278,SBP_min,0.0013900377225851178,RFC,42.0,20,target_baseline
+279,SBP_sd,0.001896956106256923,RFC,43.0,20,target_baseline
+280,SPO2_max,0.0008394036776333362,RFC,44.0,20,target_baseline
+281,SPO2_mean,0.0017261872988446054,RFC,45.0,20,target_baseline
+282,SPO2_min,0.0010479431392095382,RFC,46.0,20,target_baseline
+283,SPO2_sd,0.001451943446386215,RFC,47.0,20,target_baseline
+284,TEMP_max,0.0010232739575719264,RFC,48.0,20,target_baseline
+285,TEMP_mean,0.0008559864700834133,RFC,49.0,20,target_baseline
+286,TEMP_min,0.0008650637325006838,RFC,50.0,20,target_baseline
+287,TEMP_sd,0.004158658733083226,RFC,51.0,20,target_baseline
+288,vassopresor_doses,0.0,RFC,52.0,20,target_baseline
+289,is_female,0.005082859701677922,RFC,53.0,20,target_baseline
+290,ethnicity_ASIAN,0.0,RFC,54.0,20,target_baseline
+291,ethnicity_BLACK,0.0,RFC,55.0,20,target_baseline
+292,ethnicity_HISPANIC,0.0,RFC,56.0,20,target_baseline
+293,ethnicity_OTHER,8.846205731659327e-06,RFC,57.0,20,target_baseline
+294,ethnicity_WHITE,8.964499495614377e-05,RFC,58.0,20,target_baseline
+295,Hem_base_timelag,0.002606152172762263,RFC,0.0,25,target_baseline
+296,Hb_value_initial,0.7332793634771453,RFC,1.0,25,target_baseline
+297,ageatadmin,0.002448829006191824,RFC,2.0,25,target_baseline
+298,Albumin,0.007366573475118831,RFC,3.0,25,target_baseline
+299,Bicarbonate,0.0014349309306729311,RFC,4.0,25,target_baseline
+300,"Bilirubin, Total",0.004096372356021182,RFC,5.0,25,target_baseline
+301,"Calcium, Total",0.006584022224902968,RFC,6.0,25,target_baseline
+302,Chloride,0.023685107179149886,RFC,7.0,25,target_baseline
+303,Creatinine,0.008870831038649109,RFC,8.0,25,target_baseline
+304,INR(PT),0.002464199213039987,RFC,9.0,25,target_baseline
+305,Lactate,0.0061707731789242895,RFC,10.0,25,target_baseline
+306,Lactate Dehydrogenase (LD),0.01602189648716368,RFC,11.0,25,target_baseline
+307,MCHC,0.06396463318229706,RFC,12.0,25,target_baseline
+308,pCO2,0.0029650909121430283,RFC,13.0,25,target_baseline
+309,pH,0.0014229559377782438,RFC,14.0,25,target_baseline
+310,Phosphate,0.0017452729509473649,RFC,15.0,25,target_baseline
+311,Platelet Count,0.006279937822533182,RFC,16.0,25,target_baseline
+312,pO2,0.007780476621960744,RFC,17.0,25,target_baseline
+313,Potassium,0.003204513647196365,RFC,18.0,25,target_baseline
+314,PTT,0.0019318845760551038,RFC,19.0,25,target_baseline
+315,Red Blood Cells,0.003899415581965998,RFC,20.0,25,target_baseline
+316,Sodium,0.0023381751437249604,RFC,21.0,25,target_baseline
+317,Urea Nitrogen,0.013775583825842836,RFC,22.0,25,target_baseline
+318,White Blood Cells,0.00814363714307034,RFC,23.0,25,target_baseline
+319,DBP_max,0.0015481200879631618,RFC,24.0,25,target_baseline
+320,DBP_mean,0.0011447213357304792,RFC,25.0,25,target_baseline
+321,DBP_min,0.0012024239008286356,RFC,26.0,25,target_baseline
+322,DBP_sd,0.001674990106821045,RFC,27.0,25,target_baseline
+323,GLU_max,0.0020315110120081047,RFC,28.0,25,target_baseline
+324,GLU_mean,0.0014502119245175052,RFC,29.0,25,target_baseline
+325,GLU_min,0.0025241997763403782,RFC,30.0,25,target_baseline
+326,GLU_sd,0.002516683126934269,RFC,31.0,25,target_baseline
+327,HR_max,0.002318230995220816,RFC,32.0,25,target_baseline
+328,HR_mean,0.0018208697680345122,RFC,33.0,25,target_baseline
+329,HR_min,0.0017585604069065375,RFC,34.0,25,target_baseline
+330,HR_sd,0.0019707120187328862,RFC,35.0,25,target_baseline
+331,RR_max,0.0011196634641089916,RFC,36.0,25,target_baseline
+332,RR_mean,0.01451098388866699,RFC,37.0,25,target_baseline
+333,RR_min,0.002324333287150464,RFC,38.0,25,target_baseline
+334,RR_sd,0.0016906703114023833,RFC,39.0,25,target_baseline
+335,SBP_max,0.002233674104064924,RFC,40.0,25,target_baseline
+336,SBP_mean,0.0015900640903430394,RFC,41.0,25,target_baseline
+337,SBP_min,0.001580590815919839,RFC,42.0,25,target_baseline
+338,SBP_sd,0.0023272770004204024,RFC,43.0,25,target_baseline
+339,SPO2_max,0.0008893218329082626,RFC,44.0,25,target_baseline
+340,SPO2_mean,0.0017577161444821507,RFC,45.0,25,target_baseline
+341,SPO2_min,0.00111835064758758,RFC,46.0,25,target_baseline
+342,SPO2_sd,0.0011192340378406887,RFC,47.0,25,target_baseline
+343,TEMP_max,0.0009603282468409588,RFC,48.0,25,target_baseline
+344,TEMP_mean,0.0008244464783096093,RFC,49.0,25,target_baseline
+345,TEMP_min,0.001045250014625374,RFC,50.0,25,target_baseline
+346,TEMP_sd,0.004450702509891107,RFC,51.0,25,target_baseline
+347,vassopresor_doses,0.0,RFC,52.0,25,target_baseline
+348,is_female,0.00591295360917992,RFC,53.0,25,target_baseline
+349,ethnicity_ASIAN,0.0,RFC,54.0,25,target_baseline
+350,ethnicity_BLACK,1.4814305243842048e-05,RFC,55.0,25,target_baseline
+351,ethnicity_HISPANIC,0.0,RFC,56.0,25,target_baseline
+352,ethnicity_OTHER,3.234571771511957e-06,RFC,57.0,25,target_baseline
+353,ethnicity_WHITE,8.452809394597803e-05,RFC,58.0,25,target_baseline
+354,Hem_base_timelag,0.004075004258735894,XGB,0.0,1,target_baseline
+355,Hb_value_initial,0.6912882324150038,XGB,1.0,1,target_baseline
+356,ageatadmin,0.004371757813751999,XGB,2.0,1,target_baseline
+357,Albumin,0.01165206024385675,XGB,3.0,1,target_baseline
+358,Bicarbonate,0.0017106263591350522,XGB,4.0,1,target_baseline
+359,"Bilirubin, Total",0.007199086667250366,XGB,5.0,1,target_baseline
+360,"Calcium, Total",0.005556979202444995,XGB,6.0,1,target_baseline
+361,Chloride,0.017058278200064246,XGB,7.0,1,target_baseline
+362,Creatinine,0.013738415953516244,XGB,8.0,1,target_baseline
+363,INR(PT),0.003054498505589814,XGB,9.0,1,target_baseline
+364,Lactate,0.005088209562943936,XGB,10.0,1,target_baseline
+365,Lactate Dehydrogenase (LD),0.01965502515489921,XGB,11.0,1,target_baseline
+366,MCHC,0.06413065792041814,XGB,12.0,1,target_baseline
+367,pCO2,0.0017282864040615393,XGB,13.0,1,target_baseline
+368,pH,0.0026114821482013354,XGB,14.0,1,target_baseline
+369,Phosphate,0.003353085700182665,XGB,15.0,1,target_baseline
+370,Platelet Count,0.02279726987322447,XGB,16.0,1,target_baseline
+371,pO2,0.007611136990358845,XGB,17.0,1,target_baseline
+372,Potassium,0.003982375561930245,XGB,18.0,1,target_baseline
+373,PTT,0.0031082878002111226,XGB,19.0,1,target_baseline
+374,Red Blood Cells,0.004164094317402692,XGB,20.0,1,target_baseline
+375,Sodium,0.0023868791112017776,XGB,21.0,1,target_baseline
+376,Urea Nitrogen,0.012945519035554407,XGB,22.0,1,target_baseline
+377,White Blood Cells,0.01793160743773544,XGB,23.0,1,target_baseline
+378,DBP_max,0.002449549953637992,XGB,24.0,1,target_baseline
+379,DBP_mean,0.003113696080442065,XGB,25.0,1,target_baseline
+380,DBP_min,0.002162066510873782,XGB,26.0,1,target_baseline
+381,DBP_sd,0.0021262232225231254,XGB,27.0,1,target_baseline
+382,GLU_max,0.0022758851447308268,XGB,28.0,1,target_baseline
+383,GLU_mean,0.002594198809120919,XGB,29.0,1,target_baseline
+384,GLU_min,0.001556564255071123,XGB,30.0,1,target_baseline
+385,GLU_sd,0.002258386972471839,XGB,31.0,1,target_baseline
+386,HR_max,0.003021306625056723,XGB,32.0,1,target_baseline
+387,HR_mean,0.003418529206000862,XGB,33.0,1,target_baseline
+388,HR_min,0.003294530993776932,XGB,34.0,1,target_baseline
+389,HR_sd,0.0015751578810869018,XGB,35.0,1,target_baseline
+390,RR_max,0.0007852587207756443,XGB,36.0,1,target_baseline
+391,RR_mean,0.008549351375756816,XGB,37.0,1,target_baseline
+392,RR_min,0.0008839767971033738,XGB,38.0,1,target_baseline
+393,RR_sd,0.0007839908846158344,XGB,39.0,1,target_baseline
+394,SBP_max,0.000511271392244397,XGB,40.0,1,target_baseline
+395,SBP_mean,0.0017504629421917818,XGB,41.0,1,target_baseline
+396,SBP_min,0.00295229220479439,XGB,42.0,1,target_baseline
+397,SBP_sd,0.003062761749379925,XGB,43.0,1,target_baseline
+398,SPO2_max,0.0007611258040746482,XGB,44.0,1,target_baseline
+399,SPO2_mean,0.0010442547344301923,XGB,45.0,1,target_baseline
+400,SPO2_min,0.0004539590581559924,XGB,46.0,1,target_baseline
+401,SPO2_sd,0.001312398171647829,XGB,47.0,1,target_baseline
+402,TEMP_max,0.0008279159232923376,XGB,48.0,1,target_baseline
+403,TEMP_mean,0.0005829548855945219,XGB,49.0,1,target_baseline
+404,TEMP_min,0.0005270291285214703,XGB,50.0,1,target_baseline
+405,TEMP_sd,0.0026995672454539327,XGB,51.0,1,target_baseline
+406,vassopresor_doses,0.0,XGB,52.0,1,target_baseline
+407,is_female,0.009238643835346151,XGB,53.0,1,target_baseline
+408,ethnicity_ASIAN,0.0,XGB,54.0,1,target_baseline
+409,ethnicity_BLACK,0.0015109373516529832,XGB,55.0,1,target_baseline
+410,ethnicity_HISPANIC,0.0,XGB,56.0,1,target_baseline
+411,ethnicity_OTHER,0.0,XGB,57.0,1,target_baseline
+412,ethnicity_WHITE,0.0007168955024996027,XGB,58.0,1,target_baseline
+413,Hem_base_timelag,0.0043192765647402254,XGB,0.0,5,target_baseline
+414,Hb_value_initial,0.6883856791841906,XGB,1.0,5,target_baseline
+415,ageatadmin,0.002018248019801318,XGB,2.0,5,target_baseline
+416,Albumin,0.006862269203451203,XGB,3.0,5,target_baseline
+417,Bicarbonate,0.0011711224813721768,XGB,4.0,5,target_baseline
+418,"Bilirubin, Total",0.004007804037589165,XGB,5.0,5,target_baseline
+419,"Calcium, Total",0.01035723959183538,XGB,6.0,5,target_baseline
+420,Chloride,0.01683741233583207,XGB,7.0,5,target_baseline
+421,Creatinine,0.013068935064829385,XGB,8.0,5,target_baseline
+422,INR(PT),0.005337925519092735,XGB,9.0,5,target_baseline
+423,Lactate,0.008647559331660722,XGB,10.0,5,target_baseline
+424,Lactate Dehydrogenase (LD),0.010475842098576979,XGB,11.0,5,target_baseline
+425,MCHC,0.06668075396315683,XGB,12.0,5,target_baseline
+426,pCO2,0.002290242520526653,XGB,13.0,5,target_baseline
+427,pH,0.0028644077153003487,XGB,14.0,5,target_baseline
+428,Phosphate,0.0011594744876753914,XGB,15.0,5,target_baseline
+429,Platelet Count,0.01872787170677426,XGB,16.0,5,target_baseline
+430,pO2,0.015442037958281647,XGB,17.0,5,target_baseline
+431,Potassium,0.002451522825073378,XGB,18.0,5,target_baseline
+432,PTT,0.0033592550556189858,XGB,19.0,5,target_baseline
+433,Red Blood Cells,0.007161991373063402,XGB,20.0,5,target_baseline
+434,Sodium,0.002816178149511552,XGB,21.0,5,target_baseline
+435,Urea Nitrogen,0.014209521425318488,XGB,22.0,5,target_baseline
+436,White Blood Cells,0.018740751369471283,XGB,23.0,5,target_baseline
+437,DBP_max,0.0017164340454203595,XGB,24.0,5,target_baseline
+438,DBP_mean,0.0014399438538613724,XGB,25.0,5,target_baseline
+439,DBP_min,0.001817047684128072,XGB,26.0,5,target_baseline
+440,DBP_sd,0.0014240795303239145,XGB,27.0,5,target_baseline
+441,GLU_max,0.0016336495145997942,XGB,28.0,5,target_baseline
+442,GLU_mean,0.0014292235747623925,XGB,29.0,5,target_baseline
+443,GLU_min,0.0027534670492539905,XGB,30.0,5,target_baseline
+444,GLU_sd,0.0013696062249807356,XGB,31.0,5,target_baseline
+445,HR_max,0.0009843922988831742,XGB,32.0,5,target_baseline
+446,HR_mean,0.004227968291456392,XGB,33.0,5,target_baseline
+447,HR_min,0.0044402192714945565,XGB,34.0,5,target_baseline
+448,HR_sd,0.002405540594929031,XGB,35.0,5,target_baseline
+449,RR_max,0.00012976907507063724,XGB,36.0,5,target_baseline
+450,RR_mean,0.008130710751695783,XGB,37.0,5,target_baseline
+451,RR_min,0.002840159417752118,XGB,38.0,5,target_baseline
+452,RR_sd,0.0010107619887684768,XGB,39.0,5,target_baseline
+453,SBP_max,0.0011137616601785759,XGB,40.0,5,target_baseline
+454,SBP_mean,0.0030601878370536033,XGB,41.0,5,target_baseline
+455,SBP_min,0.00245173149890069,XGB,42.0,5,target_baseline
+456,SBP_sd,0.002176659704452381,XGB,43.0,5,target_baseline
+457,SPO2_max,0.000995028814152811,XGB,44.0,5,target_baseline
+458,SPO2_mean,0.0034967895013355787,XGB,45.0,5,target_baseline
+459,SPO2_min,0.0016412854037313055,XGB,46.0,5,target_baseline
+460,SPO2_sd,0.0005946748154315192,XGB,47.0,5,target_baseline
+461,TEMP_max,0.0008135413321196577,XGB,48.0,5,target_baseline
+462,TEMP_mean,0.001142524146221807,XGB,49.0,5,target_baseline
+463,TEMP_min,0.0004721789504382492,XGB,50.0,5,target_baseline
+464,TEMP_sd,0.005352634459666458,XGB,51.0,5,target_baseline
+465,vassopresor_doses,0.0,XGB,52.0,5,target_baseline
+466,is_female,0.010312135433975779,XGB,53.0,5,target_baseline
+467,ethnicity_ASIAN,0.0,XGB,54.0,5,target_baseline
+468,ethnicity_BLACK,0.0012305712922167046,XGB,55.0,5,target_baseline
+469,ethnicity_HISPANIC,0.0,XGB,56.0,5,target_baseline
+470,ethnicity_OTHER,0.0,XGB,57.0,5,target_baseline
+471,ethnicity_WHITE,0.0,XGB,58.0,5,target_baseline
+472,Hem_base_timelag,0.004468588757102539,XGB,0.0,10,target_baseline
+473,Hb_value_initial,0.6888967538523543,XGB,1.0,10,target_baseline
+474,ageatadmin,0.0042049021588460665,XGB,2.0,10,target_baseline
+475,Albumin,0.012014776404172844,XGB,3.0,10,target_baseline
+476,Bicarbonate,0.0008570872641010478,XGB,4.0,10,target_baseline
+477,"Bilirubin, Total",0.006302919863117462,XGB,5.0,10,target_baseline
+478,"Calcium, Total",0.009313126097095134,XGB,6.0,10,target_baseline
+479,Chloride,0.021078745906291357,XGB,7.0,10,target_baseline
+480,Creatinine,0.013371938146497273,XGB,8.0,10,target_baseline
+481,INR(PT),0.0028277536383402428,XGB,9.0,10,target_baseline
+482,Lactate,0.0048465927737160975,XGB,10.0,10,target_baseline
+483,Lactate Dehydrogenase (LD),0.015969642092907462,XGB,11.0,10,target_baseline
+484,MCHC,0.06449155922699479,XGB,12.0,10,target_baseline
+485,pCO2,0.0013557133378739362,XGB,13.0,10,target_baseline
+486,pH,0.0009790493719845884,XGB,14.0,10,target_baseline
+487,Phosphate,0.00037994218428313777,XGB,15.0,10,target_baseline
+488,Platelet Count,0.025189191070586904,XGB,16.0,10,target_baseline
+489,pO2,0.015010949531799862,XGB,17.0,10,target_baseline
+490,Potassium,0.002605137964577318,XGB,18.0,10,target_baseline
+491,PTT,0.0027652468984231825,XGB,19.0,10,target_baseline
+492,Red Blood Cells,0.006518481860329202,XGB,20.0,10,target_baseline
+493,Sodium,0.0034748244506373023,XGB,21.0,10,target_baseline
+494,Urea Nitrogen,0.015501926538232827,XGB,22.0,10,target_baseline
+495,White Blood Cells,0.020485061504220317,XGB,23.0,10,target_baseline
+496,DBP_max,0.0017162432591109305,XGB,24.0,10,target_baseline
+497,DBP_mean,0.00032027678723312237,XGB,25.0,10,target_baseline
+498,DBP_min,0.0014283535385674745,XGB,26.0,10,target_baseline
+499,DBP_sd,0.002357454445786825,XGB,27.0,10,target_baseline
+500,GLU_max,0.0015054084388038099,XGB,28.0,10,target_baseline
+501,GLU_mean,0.000451323213692351,XGB,29.0,10,target_baseline
+502,GLU_min,0.0018371530532402735,XGB,30.0,10,target_baseline
+503,GLU_sd,0.0017511063332835714,XGB,31.0,10,target_baseline
+504,HR_max,0.0003544690452320411,XGB,32.0,10,target_baseline
+505,HR_mean,0.0021611098764249517,XGB,33.0,10,target_baseline
+506,HR_min,0.003614119249580532,XGB,34.0,10,target_baseline
+507,HR_sd,0.0012735854547729231,XGB,35.0,10,target_baseline
+508,RR_max,0.0004964742583759081,XGB,36.0,10,target_baseline
+509,RR_mean,0.007797983602027353,XGB,37.0,10,target_baseline
+510,RR_min,0.002980826541050732,XGB,38.0,10,target_baseline
+511,RR_sd,0.00115157079611171,XGB,39.0,10,target_baseline
+512,SBP_max,0.0012697794164845488,XGB,40.0,10,target_baseline
+513,SBP_mean,0.0012428601502718025,XGB,41.0,10,target_baseline
+514,SBP_min,0.0016420986669121148,XGB,42.0,10,target_baseline
+515,SBP_sd,0.0010487694182212746,XGB,43.0,10,target_baseline
+516,SPO2_max,0.0013337865623490772,XGB,44.0,10,target_baseline
+517,SPO2_mean,0.002367449573398597,XGB,45.0,10,target_baseline
+518,SPO2_min,0.0008065042238453424,XGB,46.0,10,target_baseline
+519,SPO2_sd,0.0005501993467923115,XGB,47.0,10,target_baseline
+520,TEMP_max,0.00013667819652256848,XGB,48.0,10,target_baseline
+521,TEMP_mean,0.0007604839284435686,XGB,49.0,10,target_baseline
+522,TEMP_min,0.0006459161176790313,XGB,50.0,10,target_baseline
+523,TEMP_sd,0.0031029082676238807,XGB,51.0,10,target_baseline
+524,vassopresor_doses,0.0,XGB,52.0,10,target_baseline
+525,is_female,0.009735732248008536,XGB,53.0,10,target_baseline
+526,ethnicity_ASIAN,0.0,XGB,54.0,10,target_baseline
+527,ethnicity_BLACK,0.0010980456228662939,XGB,55.0,10,target_baseline
+528,ethnicity_HISPANIC,0.0,XGB,56.0,10,target_baseline
+529,ethnicity_OTHER,0.0,XGB,57.0,10,target_baseline
+530,ethnicity_WHITE,0.00015141947280149858,XGB,58.0,10,target_baseline
+531,Hem_base_timelag,0.005661394294244701,XGB,0.0,15,target_baseline
+532,Hb_value_initial,0.6823596825496302,XGB,1.0,15,target_baseline
+533,ageatadmin,0.003125628610024061,XGB,2.0,15,target_baseline
+534,Albumin,0.008193245773477178,XGB,3.0,15,target_baseline
+535,Bicarbonate,0.0017548266093443704,XGB,4.0,15,target_baseline
+536,"Bilirubin, Total",0.007629568463791788,XGB,5.0,15,target_baseline
+537,"Calcium, Total",0.00766919843378982,XGB,6.0,15,target_baseline
+538,Chloride,0.01655235659814322,XGB,7.0,15,target_baseline
+539,Creatinine,0.008892274129230316,XGB,8.0,15,target_baseline
+540,INR(PT),0.002657577462972871,XGB,9.0,15,target_baseline
+541,Lactate,0.004346298134839152,XGB,10.0,15,target_baseline
+542,Lactate Dehydrogenase (LD),0.015470728457005888,XGB,11.0,15,target_baseline
+543,MCHC,0.061871690160511875,XGB,12.0,15,target_baseline
+544,pCO2,0.00032229244990100817,XGB,13.0,15,target_baseline
+545,pH,0.002041072294708421,XGB,14.0,15,target_baseline
+546,Phosphate,0.002681165030943709,XGB,15.0,15,target_baseline
+547,Platelet Count,0.02311448090279917,XGB,16.0,15,target_baseline
+548,pO2,0.013511067704487638,XGB,17.0,15,target_baseline
+549,Potassium,0.002934160182411753,XGB,18.0,15,target_baseline
+550,PTT,0.002757193207787035,XGB,19.0,15,target_baseline
+551,Red Blood Cells,0.0062841873372202215,XGB,20.0,15,target_baseline
+552,Sodium,0.004416307612957322,XGB,21.0,15,target_baseline
+553,Urea Nitrogen,0.016753181001335722,XGB,22.0,15,target_baseline
+554,White Blood Cells,0.01856014647520456,XGB,23.0,15,target_baseline
+555,DBP_max,0.0037000467668213493,XGB,24.0,15,target_baseline
+556,DBP_mean,0.0012772257571114038,XGB,25.0,15,target_baseline
+557,DBP_min,0.001988023842515486,XGB,26.0,15,target_baseline
+558,DBP_sd,0.0005021868299683916,XGB,27.0,15,target_baseline
+559,GLU_max,0.0032204590545357203,XGB,28.0,15,target_baseline
+560,GLU_mean,0.0012378875907761724,XGB,29.0,15,target_baseline
+561,GLU_min,0.0022893409928830674,XGB,30.0,15,target_baseline
+562,GLU_sd,0.003757587688915522,XGB,31.0,15,target_baseline
+563,HR_max,0.0015200265578834851,XGB,32.0,15,target_baseline
+564,HR_mean,0.004190015206192054,XGB,33.0,15,target_baseline
+565,HR_min,0.006393056971041582,XGB,34.0,15,target_baseline
+566,HR_sd,0.0013919602849394323,XGB,35.0,15,target_baseline
+567,RR_max,0.0004998324078833086,XGB,36.0,15,target_baseline
+568,RR_mean,0.011191923860800113,XGB,37.0,15,target_baseline
+569,RR_min,0.004468760489733772,XGB,38.0,15,target_baseline
+570,RR_sd,0.001133500172375738,XGB,39.0,15,target_baseline
+571,SBP_max,0.0011129928787221564,XGB,40.0,15,target_baseline
+572,SBP_mean,0.0018088956358257985,XGB,41.0,15,target_baseline
+573,SBP_min,0.0036577869057798267,XGB,42.0,15,target_baseline
+574,SBP_sd,0.0013658071429338608,XGB,43.0,15,target_baseline
+575,SPO2_max,0.0014582028478007493,XGB,44.0,15,target_baseline
+576,SPO2_mean,0.0015749250389995755,XGB,45.0,15,target_baseline
+577,SPO2_min,0.001320390081568836,XGB,46.0,15,target_baseline
+578,SPO2_sd,0.0005091732457548772,XGB,47.0,15,target_baseline
+579,TEMP_max,0.0020810722818980134,XGB,48.0,15,target_baseline
+580,TEMP_mean,0.0007121087656179438,XGB,49.0,15,target_baseline
+581,TEMP_min,0.001272926931063923,XGB,50.0,15,target_baseline
+582,TEMP_sd,0.004303373737265486,XGB,51.0,15,target_baseline
+583,vassopresor_doses,0.0,XGB,52.0,15,target_baseline
+584,is_female,0.009667787362395756,XGB,53.0,15,target_baseline
+585,ethnicity_ASIAN,0.0,XGB,54.0,15,target_baseline
+586,ethnicity_BLACK,0.0006812672652943145,XGB,55.0,15,target_baseline
+587,ethnicity_HISPANIC,0.0,XGB,56.0,15,target_baseline
+588,ethnicity_OTHER,0.0,XGB,57.0,15,target_baseline
+589,ethnicity_WHITE,0.0001517315279404315,XGB,58.0,15,target_baseline
+590,Hem_base_timelag,0.00317118615825023,XGB,0.0,20,target_baseline
+591,Hb_value_initial,0.6921080130823467,XGB,1.0,20,target_baseline
+592,ageatadmin,0.0035912456634507118,XGB,2.0,20,target_baseline
+593,Albumin,0.008946754990989703,XGB,3.0,20,target_baseline
+594,Bicarbonate,0.0008842915560967212,XGB,4.0,20,target_baseline
+595,"Bilirubin, Total",0.005464916441229541,XGB,5.0,20,target_baseline
+596,"Calcium, Total",0.00964242228984969,XGB,6.0,20,target_baseline
+597,Chloride,0.015457851319929482,XGB,7.0,20,target_baseline
+598,Creatinine,0.015966696422538378,XGB,8.0,20,target_baseline
+599,INR(PT),0.0024924196391114947,XGB,9.0,20,target_baseline
+600,Lactate,0.006483323808881208,XGB,10.0,20,target_baseline
+601,Lactate Dehydrogenase (LD),0.01250232591702698,XGB,11.0,20,target_baseline
+602,MCHC,0.07214512695355935,XGB,12.0,20,target_baseline
+603,pCO2,0.0015597297502070347,XGB,13.0,20,target_baseline
+604,pH,0.0021075694881062448,XGB,14.0,20,target_baseline
+605,Phosphate,0.0012369223882037605,XGB,15.0,20,target_baseline
+606,Platelet Count,0.021723344196072213,XGB,16.0,20,target_baseline
+607,pO2,0.009853178855152623,XGB,17.0,20,target_baseline
+608,Potassium,0.0016765060457618155,XGB,18.0,20,target_baseline
+609,PTT,0.0028718971261379234,XGB,19.0,20,target_baseline
+610,Red Blood Cells,0.00622903430483128,XGB,20.0,20,target_baseline
+611,Sodium,0.0031029262419242066,XGB,21.0,20,target_baseline
+612,Urea Nitrogen,0.00935516179607163,XGB,22.0,20,target_baseline
+613,White Blood Cells,0.018120257240891537,XGB,23.0,20,target_baseline
+614,DBP_max,0.00476174603783157,XGB,24.0,20,target_baseline
+615,DBP_mean,0.0005459782815367383,XGB,25.0,20,target_baseline
+616,DBP_min,0.0014599622505748276,XGB,26.0,20,target_baseline
+617,DBP_sd,0.0011440364849015447,XGB,27.0,20,target_baseline
+618,GLU_max,0.003315723471265811,XGB,28.0,20,target_baseline
+619,GLU_mean,0.001505301432242092,XGB,29.0,20,target_baseline
+620,GLU_min,0.0031991963946310124,XGB,30.0,20,target_baseline
+621,GLU_sd,0.0018186928255942128,XGB,31.0,20,target_baseline
+622,HR_max,0.0028342330920981696,XGB,32.0,20,target_baseline
+623,HR_mean,0.0028631787961520237,XGB,33.0,20,target_baseline
+624,HR_min,0.002745703306563322,XGB,34.0,20,target_baseline
+625,HR_sd,0.001620544107857396,XGB,35.0,20,target_baseline
+626,RR_max,0.00040184302974376434,XGB,36.0,20,target_baseline
+627,RR_mean,0.013362219215753498,XGB,37.0,20,target_baseline
+628,RR_min,0.003282001865546503,XGB,38.0,20,target_baseline
+629,RR_sd,0.000961939689207876,XGB,39.0,20,target_baseline
+630,SBP_max,0.000463941468297971,XGB,40.0,20,target_baseline
+631,SBP_mean,0.002462624899541145,XGB,41.0,20,target_baseline
+632,SBP_min,0.0014862723444117845,XGB,42.0,20,target_baseline
+633,SBP_sd,0.0010973057208100573,XGB,43.0,20,target_baseline
+634,SPO2_max,0.0006265062871741737,XGB,44.0,20,target_baseline
+635,SPO2_mean,0.0037993154616896632,XGB,45.0,20,target_baseline
+636,SPO2_min,0.0012903225285205108,XGB,46.0,20,target_baseline
+637,SPO2_sd,0.001389029290165677,XGB,47.0,20,target_baseline
+638,TEMP_max,0.0006449142666721847,XGB,48.0,20,target_baseline
+639,TEMP_mean,0.0003600906965162684,XGB,49.0,20,target_baseline
+640,TEMP_min,0.0,XGB,50.0,20,target_baseline
+641,TEMP_sd,0.0044519094170736824,XGB,51.0,20,target_baseline
+642,vassopresor_doses,0.0,XGB,52.0,20,target_baseline
+643,is_female,0.008175153933770867,XGB,53.0,20,target_baseline
+644,ethnicity_ASIAN,0.0,XGB,54.0,20,target_baseline
+645,ethnicity_BLACK,0.00016676854445877532,XGB,55.0,20,target_baseline
+646,ethnicity_HISPANIC,0.0,XGB,56.0,20,target_baseline
+647,ethnicity_OTHER,0.0,XGB,57.0,20,target_baseline
+648,ethnicity_WHITE,0.0010704431827764994,XGB,58.0,20,target_baseline
+649,Hem_base_timelag,0.0019281556477056304,XGB,0.0,25,target_baseline
+650,Hb_value_initial,0.6874989813426988,XGB,1.0,25,target_baseline
+651,ageatadmin,0.004747305146450169,XGB,2.0,25,target_baseline
+652,Albumin,0.009534388063532084,XGB,3.0,25,target_baseline
+653,Bicarbonate,0.001513634999149247,XGB,4.0,25,target_baseline
+654,"Bilirubin, Total",0.010132710645616957,XGB,5.0,25,target_baseline
+655,"Calcium, Total",0.0079371323712911,XGB,6.0,25,target_baseline
+656,Chloride,0.024275259151257018,XGB,7.0,25,target_baseline
+657,Creatinine,0.017905522021855066,XGB,8.0,25,target_baseline
+658,INR(PT),0.0036966564530123533,XGB,9.0,25,target_baseline
+659,Lactate,0.006987149320541221,XGB,10.0,25,target_baseline
+660,Lactate Dehydrogenase (LD),0.015874237299955327,XGB,11.0,25,target_baseline
+661,MCHC,0.06479491600963681,XGB,12.0,25,target_baseline
+662,pCO2,0.0019983977994048607,XGB,13.0,25,target_baseline
+663,pH,0.0019167565332227968,XGB,14.0,25,target_baseline
+664,Phosphate,0.0017522559639581163,XGB,15.0,25,target_baseline
+665,Platelet Count,0.01779228491868398,XGB,16.0,25,target_baseline
+666,pO2,0.005216116416271014,XGB,17.0,25,target_baseline
+667,Potassium,0.003868670412333414,XGB,18.0,25,target_baseline
+668,PTT,0.0033395145526984565,XGB,19.0,25,target_baseline
+669,Red Blood Cells,0.00437480561544332,XGB,20.0,25,target_baseline
+670,Sodium,0.002794696544251078,XGB,21.0,25,target_baseline
+671,Urea Nitrogen,0.012634621147858032,XGB,22.0,25,target_baseline
+672,White Blood Cells,0.013888292977668713,XGB,23.0,25,target_baseline
+673,DBP_max,0.002714443769473102,XGB,24.0,25,target_baseline
+674,DBP_mean,0.0008040590967005958,XGB,25.0,25,target_baseline
+675,DBP_min,0.000985749633813786,XGB,26.0,25,target_baseline
+676,DBP_sd,0.0015976343923285988,XGB,27.0,25,target_baseline
+677,GLU_max,0.0013766623756101266,XGB,28.0,25,target_baseline
+678,GLU_mean,0.002182923743035822,XGB,29.0,25,target_baseline
+679,GLU_min,0.00392991853873239,XGB,30.0,25,target_baseline
+680,GLU_sd,0.003215823903947834,XGB,31.0,25,target_baseline
+681,HR_max,0.0018868348623734255,XGB,32.0,25,target_baseline
+682,HR_mean,0.0007044348514991718,XGB,33.0,25,target_baseline
+683,HR_min,0.005774304007165951,XGB,34.0,25,target_baseline
+684,HR_sd,0.0010484866481804485,XGB,35.0,25,target_baseline
+685,RR_max,0.0005812822675693955,XGB,36.0,25,target_baseline
+686,RR_mean,0.012371576023155214,XGB,37.0,25,target_baseline
+687,RR_min,0.0006934263064398401,XGB,38.0,25,target_baseline
+688,RR_sd,0.0008566976924763568,XGB,39.0,25,target_baseline
+689,SBP_max,0.0009661927643795752,XGB,40.0,25,target_baseline
+690,SBP_mean,0.0035604824553788885,XGB,41.0,25,target_baseline
+691,SBP_min,0.0018559732667933774,XGB,42.0,25,target_baseline
+692,SBP_sd,0.0023712559139465266,XGB,43.0,25,target_baseline
+693,SPO2_max,0.0005348775913412839,XGB,44.0,25,target_baseline
+694,SPO2_mean,0.000710855825592562,XGB,45.0,25,target_baseline
+695,SPO2_min,0.001775361098223956,XGB,46.0,25,target_baseline
+696,SPO2_sd,0.001030390424010526,XGB,47.0,25,target_baseline
+697,TEMP_max,0.0006225400911191282,XGB,48.0,25,target_baseline
+698,TEMP_mean,0.00033122099036795113,XGB,49.0,25,target_baseline
+699,TEMP_min,0.0011139073200070702,XGB,50.0,25,target_baseline
+700,TEMP_sd,0.005477375565074528,XGB,51.0,25,target_baseline
+701,vassopresor_doses,0.0,XGB,52.0,25,target_baseline
+702,is_female,0.011266068950485885,XGB,53.0,25,target_baseline
+703,ethnicity_ASIAN,0.0,XGB,54.0,25,target_baseline
+704,ethnicity_BLACK,0.0010232825380126296,XGB,55.0,25,target_baseline
+705,ethnicity_HISPANIC,0.0,XGB,56.0,25,target_baseline
+706,ethnicity_OTHER,0.0,XGB,57.0,25,target_baseline
+707,ethnicity_WHITE,0.0002334957382683732,XGB,58.0,25,target_baseline
+708,Hem_base_timelag,0.0010111911268488405,Lin,0.0,1,target_baseline
+709,Hb_value_initial,1.0846912347163271,Lin,1.0,1,target_baseline
+710,ageatadmin,-0.06292174665638894,Lin,2.0,1,target_baseline
+711,Albumin,0.02779117161213915,Lin,3.0,1,target_baseline
+712,Bicarbonate,0.10862563058494593,Lin,4.0,1,target_baseline
+713,"Bilirubin, Total",-0.08087796494010001,Lin,5.0,1,target_baseline
+714,"Calcium, Total",-0.042269637995320485,Lin,6.0,1,target_baseline
+715,Chloride,0.3792590086864986,Lin,7.0,1,target_baseline
+716,Creatinine,-0.014390697621995262,Lin,8.0,1,target_baseline
+717,INR(PT),0.0028167454287855442,Lin,9.0,1,target_baseline
+718,Lactate,0.0277024380824209,Lin,10.0,1,target_baseline
+719,Lactate Dehydrogenase (LD),-0.044260208529438766,Lin,11.0,1,target_baseline
+720,MCHC,0.3186118605336244,Lin,12.0,1,target_baseline
+721,pCO2,0.0148946640545769,Lin,13.0,1,target_baseline
+722,pH,-0.00934481981276089,Lin,14.0,1,target_baseline
+723,Phosphate,0.046559319550368905,Lin,15.0,1,target_baseline
+724,Platelet Count,-0.08731856493054937,Lin,16.0,1,target_baseline
+725,pO2,0.04811105232103978,Lin,17.0,1,target_baseline
+726,Potassium,-0.08243056188443387,Lin,18.0,1,target_baseline
+727,PTT,0.003909878655885504,Lin,19.0,1,target_baseline
+728,Red Blood Cells,0.10288614395040252,Lin,20.0,1,target_baseline
+729,Sodium,-0.16614158477939162,Lin,21.0,1,target_baseline
+730,Urea Nitrogen,-0.06489764991067963,Lin,22.0,1,target_baseline
+731,White Blood Cells,0.05780867738736601,Lin,23.0,1,target_baseline
+732,DBP_max,0.07934572207138632,Lin,24.0,1,target_baseline
+733,DBP_mean,0.18889774467657566,Lin,25.0,1,target_baseline
+734,DBP_min,-0.23199759068825596,Lin,26.0,1,target_baseline
+735,DBP_sd,-0.1302091598503008,Lin,27.0,1,target_baseline
+736,GLU_max,-0.08502440023856775,Lin,28.0,1,target_baseline
+737,GLU_mean,0.30351290041914925,Lin,29.0,1,target_baseline
+738,GLU_min,-0.15743494467966276,Lin,30.0,1,target_baseline
+739,GLU_sd,-0.049691535821207306,Lin,31.0,1,target_baseline
+740,HR_max,0.06640343037979718,Lin,32.0,1,target_baseline
+741,HR_mean,-0.08043890771035986,Lin,33.0,1,target_baseline
+742,HR_min,-0.05640620281389075,Lin,34.0,1,target_baseline
+743,HR_sd,-0.02752117105591735,Lin,35.0,1,target_baseline
+744,RR_max,0.1952429850834332,Lin,36.0,1,target_baseline
+745,RR_mean,-0.2572070109301041,Lin,37.0,1,target_baseline
+746,RR_min,0.040943180833225616,Lin,38.0,1,target_baseline
+747,RR_sd,-0.056979105248060165,Lin,39.0,1,target_baseline
+748,SBP_max,-0.06806187093789239,Lin,40.0,1,target_baseline
+749,SBP_mean,-0.07054016695765936,Lin,41.0,1,target_baseline
+750,SBP_min,0.08764386219498202,Lin,42.0,1,target_baseline
+751,SBP_sd,0.0428213358062977,Lin,43.0,1,target_baseline
+752,SPO2_max,-0.049458996062037484,Lin,44.0,1,target_baseline
+753,SPO2_mean,-0.0907264654573208,Lin,45.0,1,target_baseline
+754,SPO2_min,0.06166226813476375,Lin,46.0,1,target_baseline
+755,SPO2_sd,-0.02663161450430437,Lin,47.0,1,target_baseline
+756,TEMP_max,-0.009890090536934154,Lin,48.0,1,target_baseline
+757,TEMP_mean,0.010279762242300485,Lin,49.0,1,target_baseline
+758,TEMP_min,0.03915136963365448,Lin,50.0,1,target_baseline
+759,TEMP_sd,0.051313360764538234,Lin,51.0,1,target_baseline
+760,vassopresor_doses,-0.02091039303138661,Lin,52.0,1,target_baseline
+761,is_female,-0.14690482222422765,Lin,53.0,1,target_baseline
+762,ethnicity_ASIAN,-55257151173.167984,Lin,54.0,1,target_baseline
+763,ethnicity_BLACK,-87933080957.1057,Lin,55.0,1,target_baseline
+764,ethnicity_HISPANIC,-53123313654.65938,Lin,56.0,1,target_baseline
+765,ethnicity_OTHER,-97733154138.71167,Lin,57.0,1,target_baseline
+766,ethnicity_WHITE,-137806266436.5751,Lin,58.0,1,target_baseline
+767,Hem_base_timelag,-0.0203432001804978,Lin,0.0,5,target_baseline
+768,Hb_value_initial,1.111322019788691,Lin,1.0,5,target_baseline
+769,ageatadmin,-0.0638606027822281,Lin,2.0,5,target_baseline
+770,Albumin,0.020383106510813938,Lin,3.0,5,target_baseline
+771,Bicarbonate,0.1299602760119859,Lin,4.0,5,target_baseline
+772,"Bilirubin, Total",-0.06773935713107868,Lin,5.0,5,target_baseline
+773,"Calcium, Total",-0.08221044775891634,Lin,6.0,5,target_baseline
+774,Chloride,0.3693364937296065,Lin,7.0,5,target_baseline
+775,Creatinine,-0.009805616117359979,Lin,8.0,5,target_baseline
+776,INR(PT),0.009301931183041678,Lin,9.0,5,target_baseline
+777,Lactate,0.06979955636309335,Lin,10.0,5,target_baseline
+778,Lactate Dehydrogenase (LD),-0.044928411789287116,Lin,11.0,5,target_baseline
+779,MCHC,0.31461128927513626,Lin,12.0,5,target_baseline
+780,pCO2,0.02787420236660826,Lin,13.0,5,target_baseline
+781,pH,-0.003194246954515395,Lin,14.0,5,target_baseline
+782,Phosphate,0.034971602246230186,Lin,15.0,5,target_baseline
+783,Platelet Count,-0.09165577295428644,Lin,16.0,5,target_baseline
+784,pO2,0.08333143623641223,Lin,17.0,5,target_baseline
+785,Potassium,-0.038531817158227566,Lin,18.0,5,target_baseline
+786,PTT,0.01420804503159036,Lin,19.0,5,target_baseline
+787,Red Blood Cells,0.08177079311855978,Lin,20.0,5,target_baseline
+788,Sodium,-0.16022238630642333,Lin,21.0,5,target_baseline
+789,Urea Nitrogen,-0.05152802406121727,Lin,22.0,5,target_baseline
+790,White Blood Cells,0.057682445680638565,Lin,23.0,5,target_baseline
+791,DBP_max,0.06347848874215484,Lin,24.0,5,target_baseline
+792,DBP_mean,0.19862721361725627,Lin,25.0,5,target_baseline
+793,DBP_min,-0.19885668049202995,Lin,26.0,5,target_baseline
+794,DBP_sd,-0.11213278406606217,Lin,27.0,5,target_baseline
+795,GLU_max,-0.1575467590050486,Lin,28.0,5,target_baseline
+796,GLU_mean,0.2902958804402548,Lin,29.0,5,target_baseline
+797,GLU_min,-0.11563904018765366,Lin,30.0,5,target_baseline
+798,GLU_sd,-0.029505990820021505,Lin,31.0,5,target_baseline
+799,HR_max,-0.07821028938506702,Lin,32.0,5,target_baseline
+800,HR_mean,0.04913601009036825,Lin,33.0,5,target_baseline
+801,HR_min,-0.06535553139025345,Lin,34.0,5,target_baseline
+802,HR_sd,0.025187898918195298,Lin,35.0,5,target_baseline
+803,RR_max,0.2061353440896194,Lin,36.0,5,target_baseline
+804,RR_mean,-0.2668004542387333,Lin,37.0,5,target_baseline
+805,RR_min,0.035368819189761584,Lin,38.0,5,target_baseline
+806,RR_sd,-0.05418299589012854,Lin,39.0,5,target_baseline
+807,SBP_max,-0.010461674185933356,Lin,40.0,5,target_baseline
+808,SBP_mean,-0.1290154364902234,Lin,41.0,5,target_baseline
+809,SBP_min,0.0871336245348128,Lin,42.0,5,target_baseline
+810,SBP_sd,0.034554546435268965,Lin,43.0,5,target_baseline
+811,SPO2_max,-0.1337493137040362,Lin,44.0,5,target_baseline
+812,SPO2_mean,0.028037781777052132,Lin,45.0,5,target_baseline
+813,SPO2_min,0.019478371291473243,Lin,46.0,5,target_baseline
+814,SPO2_sd,-0.013779486725225623,Lin,47.0,5,target_baseline
+815,TEMP_max,0.01253866831406483,Lin,48.0,5,target_baseline
+816,TEMP_mean,-0.02111568313506781,Lin,49.0,5,target_baseline
+817,TEMP_min,0.06991188564846534,Lin,50.0,5,target_baseline
+818,TEMP_sd,0.06496954182803412,Lin,51.0,5,target_baseline
+819,vassopresor_doses,-0.034791096312782786,Lin,52.0,5,target_baseline
+820,is_female,-0.13838949040968296,Lin,53.0,5,target_baseline
+821,ethnicity_ASIAN,-95590850644.46014,Lin,54.0,5,target_baseline
+822,ethnicity_BLACK,-156106437153.32568,Lin,55.0,5,target_baseline
+823,ethnicity_HISPANIC,-96963675202.69742,Lin,56.0,5,target_baseline
+824,ethnicity_OTHER,-174254915661.3344,Lin,57.0,5,target_baseline
+825,ethnicity_WHITE,-244935890674.57904,Lin,58.0,5,target_baseline
+826,Hem_base_timelag,0.005290859448003666,Lin,0.0,10,target_baseline
+827,Hb_value_initial,1.1040648505952295,Lin,1.0,10,target_baseline
+828,ageatadmin,-0.09099003322868048,Lin,2.0,10,target_baseline
+829,Albumin,0.05776985888817347,Lin,3.0,10,target_baseline
+830,Bicarbonate,0.10247897442712067,Lin,4.0,10,target_baseline
+831,"Bilirubin, Total",-0.0832173852799481,Lin,5.0,10,target_baseline
+832,"Calcium, Total",-0.07054129494760661,Lin,6.0,10,target_baseline
+833,Chloride,0.3923379896821593,Lin,7.0,10,target_baseline
+834,Creatinine,-0.009224293487468477,Lin,8.0,10,target_baseline
+835,INR(PT),-0.0014242281236001785,Lin,9.0,10,target_baseline
+836,Lactate,0.07764369422891312,Lin,10.0,10,target_baseline
+837,Lactate Dehydrogenase (LD),-0.027783949575432898,Lin,11.0,10,target_baseline
+838,MCHC,0.29772900795467383,Lin,12.0,10,target_baseline
+839,pCO2,0.03895997657383954,Lin,13.0,10,target_baseline
+840,pH,0.016928669928936803,Lin,14.0,10,target_baseline
+841,Phosphate,0.04123992385474606,Lin,15.0,10,target_baseline
+842,Platelet Count,-0.08384279396629972,Lin,16.0,10,target_baseline
+843,pO2,0.07547956898923586,Lin,17.0,10,target_baseline
+844,Potassium,-0.06722651183165311,Lin,18.0,10,target_baseline
+845,PTT,0.024224799840426556,Lin,19.0,10,target_baseline
+846,Red Blood Cells,0.10443060848857068,Lin,20.0,10,target_baseline
+847,Sodium,-0.1689841326982598,Lin,21.0,10,target_baseline
+848,Urea Nitrogen,-0.08226353992097231,Lin,22.0,10,target_baseline
+849,White Blood Cells,0.056576351597523826,Lin,23.0,10,target_baseline
+850,DBP_max,0.14933765099778654,Lin,24.0,10,target_baseline
+851,DBP_mean,-0.022328183985126232,Lin,25.0,10,target_baseline
+852,DBP_min,-0.08371608647862311,Lin,26.0,10,target_baseline
+853,DBP_sd,-0.11639231443980252,Lin,27.0,10,target_baseline
+854,GLU_max,-0.19410160460165124,Lin,28.0,10,target_baseline
+855,GLU_mean,0.4821213798525617,Lin,29.0,10,target_baseline
+856,GLU_min,-0.2667343092297736,Lin,30.0,10,target_baseline
+857,GLU_sd,-0.07560762210033342,Lin,31.0,10,target_baseline
+858,HR_max,0.04577172673604464,Lin,32.0,10,target_baseline
+859,HR_mean,-0.10941876053334827,Lin,33.0,10,target_baseline
+860,HR_min,-0.017354016187066938,Lin,34.0,10,target_baseline
+861,HR_sd,0.00651416428959271,Lin,35.0,10,target_baseline
+862,RR_max,0.19428372758795168,Lin,36.0,10,target_baseline
+863,RR_mean,-0.26172852738247065,Lin,37.0,10,target_baseline
+864,RR_min,0.05838278544029561,Lin,38.0,10,target_baseline
+865,RR_sd,-0.050739099489681805,Lin,39.0,10,target_baseline
+866,SBP_max,-0.02140305935099696,Lin,40.0,10,target_baseline
+867,SBP_mean,-0.0781909087313008,Lin,41.0,10,target_baseline
+868,SBP_min,0.07880579843817087,Lin,42.0,10,target_baseline
+869,SBP_sd,0.06815134996034994,Lin,43.0,10,target_baseline
+870,SPO2_max,-0.0587816847572195,Lin,44.0,10,target_baseline
+871,SPO2_mean,-0.022556035910918062,Lin,45.0,10,target_baseline
+872,SPO2_min,-0.023289414112173883,Lin,46.0,10,target_baseline
+873,SPO2_sd,-0.054835074243203885,Lin,47.0,10,target_baseline
+874,TEMP_max,9.771585090517788e-05,Lin,48.0,10,target_baseline
+875,TEMP_mean,-0.0028979589380829997,Lin,49.0,10,target_baseline
+876,TEMP_min,0.032732047942344245,Lin,50.0,10,target_baseline
+877,TEMP_sd,0.038878415036193686,Lin,51.0,10,target_baseline
+878,vassopresor_doses,-0.02284974566803832,Lin,52.0,10,target_baseline
+879,is_female,-0.1588570750696685,Lin,53.0,10,target_baseline
+880,ethnicity_ASIAN,1656013819588.6204,Lin,54.0,10,target_baseline
+881,ethnicity_BLACK,2672716458373.685,Lin,55.0,10,target_baseline
+882,ethnicity_HISPANIC,1632743210639.7864,Lin,56.0,10,target_baseline
+883,ethnicity_OTHER,2968363712381.0,Lin,57.0,10,target_baseline
+884,ethnicity_WHITE,4178446952368.444,Lin,58.0,10,target_baseline
+885,Hem_base_timelag,0.010722533997583486,Lin,0.0,15,target_baseline
+886,Hb_value_initial,1.0737889902253477,Lin,1.0,15,target_baseline
+887,ageatadmin,-0.07893998016653875,Lin,2.0,15,target_baseline
+888,Albumin,0.02600625738842149,Lin,3.0,15,target_baseline
+889,Bicarbonate,0.07589494466327107,Lin,4.0,15,target_baseline
+890,"Bilirubin, Total",-0.07459685985359663,Lin,5.0,15,target_baseline
+891,"Calcium, Total",-0.06094064976330485,Lin,6.0,15,target_baseline
+892,Chloride,0.3202404820932179,Lin,7.0,15,target_baseline
+893,Creatinine,0.00044884939104096477,Lin,8.0,15,target_baseline
+894,INR(PT),-0.06550191829080812,Lin,9.0,15,target_baseline
+895,Lactate,0.045747263464937626,Lin,10.0,15,target_baseline
+896,Lactate Dehydrogenase (LD),-0.039445819839055325,Lin,11.0,15,target_baseline
+897,MCHC,0.3073149205290334,Lin,12.0,15,target_baseline
+898,pCO2,0.014729691561185587,Lin,13.0,15,target_baseline
+899,pH,-0.0330212473026586,Lin,14.0,15,target_baseline
+900,Phosphate,0.037453797595173866,Lin,15.0,15,target_baseline
+901,Platelet Count,-0.10997043905504797,Lin,16.0,15,target_baseline
+902,pO2,0.0720188920507359,Lin,17.0,15,target_baseline
+903,Potassium,-0.07037473220390981,Lin,18.0,15,target_baseline
+904,PTT,0.008780662508138444,Lin,19.0,15,target_baseline
+905,Red Blood Cells,0.11024220574698736,Lin,20.0,15,target_baseline
+906,Sodium,-0.13632683771428,Lin,21.0,15,target_baseline
+907,Urea Nitrogen,-0.06179714757826205,Lin,22.0,15,target_baseline
+908,White Blood Cells,0.09267302424339274,Lin,23.0,15,target_baseline
+909,DBP_max,0.14393347139452015,Lin,24.0,15,target_baseline
+910,DBP_mean,0.046170163494467266,Lin,25.0,15,target_baseline
+911,DBP_min,-0.11467428498821605,Lin,26.0,15,target_baseline
+912,DBP_sd,-0.11440630371314335,Lin,27.0,15,target_baseline
+913,GLU_max,-0.3105989303443413,Lin,28.0,15,target_baseline
+914,GLU_mean,0.6763901648435999,Lin,29.0,15,target_baseline
+915,GLU_min,-0.3595693944183087,Lin,30.0,15,target_baseline
+916,GLU_sd,-0.050901068586899786,Lin,31.0,15,target_baseline
+917,HR_max,0.1132037543598092,Lin,32.0,15,target_baseline
+918,HR_mean,-0.24360314838297406,Lin,33.0,15,target_baseline
+919,HR_min,0.024411182067999256,Lin,34.0,15,target_baseline
+920,HR_sd,-0.006680361093010907,Lin,35.0,15,target_baseline
+921,RR_max,0.26602395943902435,Lin,36.0,15,target_baseline
+922,RR_mean,-0.3375519335007421,Lin,37.0,15,target_baseline
+923,RR_min,0.06691083846384319,Lin,38.0,15,target_baseline
+924,RR_sd,-0.0736324546127687,Lin,39.0,15,target_baseline
+925,SBP_max,-0.04924070188003207,Lin,40.0,15,target_baseline
+926,SBP_mean,-0.05813049150254807,Lin,41.0,15,target_baseline
+927,SBP_min,0.0451092973143133,Lin,42.0,15,target_baseline
+928,SBP_sd,0.032605556231015034,Lin,43.0,15,target_baseline
+929,SPO2_max,-0.08223333994961332,Lin,44.0,15,target_baseline
+930,SPO2_mean,-0.012019159694984072,Lin,45.0,15,target_baseline
+931,SPO2_min,0.01304618550215908,Lin,46.0,15,target_baseline
+932,SPO2_sd,-0.007460297369232995,Lin,47.0,15,target_baseline
+933,TEMP_max,0.16869367220402826,Lin,48.0,15,target_baseline
+934,TEMP_mean,-0.18838464513171585,Lin,49.0,15,target_baseline
+935,TEMP_min,0.016742802470479906,Lin,50.0,15,target_baseline
+936,TEMP_sd,-0.024255700597411528,Lin,51.0,15,target_baseline
+937,vassopresor_doses,-0.019894268927964143,Lin,52.0,15,target_baseline
+938,is_female,-0.15196000972606236,Lin,53.0,15,target_baseline
+939,ethnicity_ASIAN,1742400971896.8718,Lin,54.0,15,target_baseline
+940,ethnicity_BLACK,2869744308577.2944,Lin,55.0,15,target_baseline
+941,ethnicity_HISPANIC,1792818613140.6497,Lin,56.0,15,target_baseline
+942,ethnicity_OTHER,3214088535239.82,Lin,57.0,15,target_baseline
+943,ethnicity_WHITE,4505300082426.646,Lin,58.0,15,target_baseline
+944,Hem_base_timelag,-0.014578941151857852,Lin,0.0,20,target_baseline
+945,Hb_value_initial,1.1061501286029132,Lin,1.0,20,target_baseline
+946,ageatadmin,-0.07883018098096034,Lin,2.0,20,target_baseline
+947,Albumin,0.015392340313237553,Lin,3.0,20,target_baseline
+948,Bicarbonate,0.1270338789030127,Lin,4.0,20,target_baseline
+949,"Bilirubin, Total",-0.0304362609207822,Lin,5.0,20,target_baseline
+950,"Calcium, Total",-0.07347959332109588,Lin,6.0,20,target_baseline
+951,Chloride,0.4021709981162499,Lin,7.0,20,target_baseline
+952,Creatinine,-0.0179252589682333,Lin,8.0,20,target_baseline
+953,INR(PT),0.008330766070094434,Lin,9.0,20,target_baseline
+954,Lactate,0.060028587636965426,Lin,10.0,20,target_baseline
+955,Lactate Dehydrogenase (LD),-0.028861374893408683,Lin,11.0,20,target_baseline
+956,MCHC,0.336278053926647,Lin,12.0,20,target_baseline
+957,pCO2,-0.01981844823062356,Lin,13.0,20,target_baseline
+958,pH,-0.06429833272607323,Lin,14.0,20,target_baseline
+959,Phosphate,0.05187425959387537,Lin,15.0,20,target_baseline
+960,Platelet Count,-0.06937930476451776,Lin,16.0,20,target_baseline
+961,pO2,0.0709124629992037,Lin,17.0,20,target_baseline
+962,Potassium,-0.06907922296268584,Lin,18.0,20,target_baseline
+963,PTT,0.024959317687591773,Lin,19.0,20,target_baseline
+964,Red Blood Cells,0.10528201121504473,Lin,20.0,20,target_baseline
+965,Sodium,-0.16539893878426265,Lin,21.0,20,target_baseline
+966,Urea Nitrogen,-0.050060044589183166,Lin,22.0,20,target_baseline
+967,White Blood Cells,0.07393715922641789,Lin,23.0,20,target_baseline
+968,DBP_max,0.13173780000570606,Lin,24.0,20,target_baseline
+969,DBP_mean,-0.06172289358828939,Lin,25.0,20,target_baseline
+970,DBP_min,-0.008575885470576222,Lin,26.0,20,target_baseline
+971,DBP_sd,-0.09650559278150928,Lin,27.0,20,target_baseline
+972,GLU_max,-0.2058550876271198,Lin,28.0,20,target_baseline
+973,GLU_mean,0.4544886488156583,Lin,29.0,20,target_baseline
+974,GLU_min,-0.2252010629336213,Lin,30.0,20,target_baseline
+975,GLU_sd,-0.037425783635616265,Lin,31.0,20,target_baseline
+976,HR_max,0.11233701282534088,Lin,32.0,20,target_baseline
+977,HR_mean,-0.4185259986236831,Lin,33.0,20,target_baseline
+978,HR_min,0.2185546796981485,Lin,34.0,20,target_baseline
+979,HR_sd,0.025901492508116727,Lin,35.0,20,target_baseline
+980,RR_max,0.17049682167655328,Lin,36.0,20,target_baseline
+981,RR_mean,-0.3261288933262907,Lin,37.0,20,target_baseline
+982,RR_min,0.14470974542769371,Lin,38.0,20,target_baseline
+983,RR_sd,0.007670679015447018,Lin,39.0,20,target_baseline
+984,SBP_max,-0.03472582073607482,Lin,40.0,20,target_baseline
+985,SBP_mean,0.01870305046660597,Lin,41.0,20,target_baseline
+986,SBP_min,-0.034014785661871015,Lin,42.0,20,target_baseline
+987,SBP_sd,0.04045566584487685,Lin,43.0,20,target_baseline
+988,SPO2_max,-0.0032951679981930576,Lin,44.0,20,target_baseline
+989,SPO2_mean,-0.06026776913994625,Lin,45.0,20,target_baseline
+990,SPO2_min,-0.0581692985432033,Lin,46.0,20,target_baseline
+991,SPO2_sd,-0.11164709792951223,Lin,47.0,20,target_baseline
+992,TEMP_max,0.006331495658554981,Lin,48.0,20,target_baseline
+993,TEMP_mean,-0.030549422003583432,Lin,49.0,20,target_baseline
+994,TEMP_min,0.10197822364450183,Lin,50.0,20,target_baseline
+995,TEMP_sd,0.07901377332504775,Lin,51.0,20,target_baseline
+996,vassopresor_doses,-0.025201331517062272,Lin,52.0,20,target_baseline
+997,is_female,-0.14748191128641033,Lin,53.0,20,target_baseline
+998,ethnicity_ASIAN,1827886965048.546,Lin,54.0,20,target_baseline
+999,ethnicity_BLACK,3068198338612.5864,Lin,55.0,20,target_baseline
+1000,ethnicity_HISPANIC,1820822269534.9219,Lin,56.0,20,target_baseline
+1001,ethnicity_OTHER,3488925051193.0264,Lin,57.0,20,target_baseline
+1002,ethnicity_WHITE,4818550915743.423,Lin,58.0,20,target_baseline
+1003,Hem_base_timelag,0.0030104592784199946,Lin,0.0,25,target_baseline
+1004,Hb_value_initial,1.11046665228624,Lin,1.0,25,target_baseline
+1005,ageatadmin,-0.08541393235359701,Lin,2.0,25,target_baseline
+1006,Albumin,0.023871145361860045,Lin,3.0,25,target_baseline
+1007,Bicarbonate,0.14411669377591588,Lin,4.0,25,target_baseline
+1008,"Bilirubin, Total",-0.08817390523106276,Lin,5.0,25,target_baseline
+1009,"Calcium, Total",-0.06698205858375766,Lin,6.0,25,target_baseline
+1010,Chloride,0.4071793870979997,Lin,7.0,25,target_baseline
+1011,Creatinine,-0.03686919988145058,Lin,8.0,25,target_baseline
+1012,INR(PT),0.0014313501645565954,Lin,9.0,25,target_baseline
+1013,Lactate,0.047713060730595384,Lin,10.0,25,target_baseline
+1014,Lactate Dehydrogenase (LD),-0.04114455583531789,Lin,11.0,25,target_baseline
+1015,MCHC,0.3115957933727444,Lin,12.0,25,target_baseline
+1016,pCO2,-0.012171520473410413,Lin,13.0,25,target_baseline
+1017,pH,-0.060707383181276574,Lin,14.0,25,target_baseline
+1018,Phosphate,0.058555639256003274,Lin,15.0,25,target_baseline
+1019,Platelet Count,-0.06437983326992723,Lin,16.0,25,target_baseline
+1020,pO2,0.050537921000859534,Lin,17.0,25,target_baseline
+1021,Potassium,-0.06712468820640691,Lin,18.0,25,target_baseline
+1022,PTT,0.016569705200901362,Lin,19.0,25,target_baseline
+1023,Red Blood Cells,0.07671820150821496,Lin,20.0,25,target_baseline
+1024,Sodium,-0.20228019702832697,Lin,21.0,25,target_baseline
+1025,Urea Nitrogen,-0.04597849676456316,Lin,22.0,25,target_baseline
+1026,White Blood Cells,0.055316510787834006,Lin,23.0,25,target_baseline
+1027,DBP_max,0.0986044446311144,Lin,24.0,25,target_baseline
+1028,DBP_mean,0.03326474627959153,Lin,25.0,25,target_baseline
+1029,DBP_min,-0.07472419282343531,Lin,26.0,25,target_baseline
+1030,DBP_sd,-0.08672763587252978,Lin,27.0,25,target_baseline
+1031,GLU_max,-0.27467166605115273,Lin,28.0,25,target_baseline
+1032,GLU_mean,0.4989960473150076,Lin,29.0,25,target_baseline
+1033,GLU_min,-0.19880382209125108,Lin,30.0,25,target_baseline
+1034,GLU_sd,-0.0156838149874123,Lin,31.0,25,target_baseline
+1035,HR_max,0.16174592065250512,Lin,32.0,25,target_baseline
+1036,HR_mean,-0.1838872083684247,Lin,33.0,25,target_baseline
+1037,HR_min,-0.042751039275891765,Lin,34.0,25,target_baseline
+1038,HR_sd,-0.02170898615302796,Lin,35.0,25,target_baseline
+1039,RR_max,0.1214768690963214,Lin,36.0,25,target_baseline
+1040,RR_mean,-0.2441329095916964,Lin,37.0,25,target_baseline
+1041,RR_min,0.0747317179506464,Lin,38.0,25,target_baseline
+1042,RR_sd,-0.027639852548532632,Lin,39.0,25,target_baseline
+1043,SBP_max,-0.008301521414428656,Lin,40.0,25,target_baseline
+1044,SBP_mean,-0.06972417776753076,Lin,41.0,25,target_baseline
+1045,SBP_min,0.05041691959624015,Lin,42.0,25,target_baseline
+1046,SBP_sd,0.0433423449863808,Lin,43.0,25,target_baseline
+1047,SPO2_max,-0.06644390434549463,Lin,44.0,25,target_baseline
+1048,SPO2_mean,-0.010967195491866559,Lin,45.0,25,target_baseline
+1049,SPO2_min,-0.01630043980473972,Lin,46.0,25,target_baseline
+1050,SPO2_sd,-0.05390462712718196,Lin,47.0,25,target_baseline
+1051,TEMP_max,-0.04091739227761443,Lin,48.0,25,target_baseline
+1052,TEMP_mean,0.21022934192221612,Lin,49.0,25,target_baseline
+1053,TEMP_min,-0.18699514431016065,Lin,50.0,25,target_baseline
+1054,TEMP_sd,-0.04764558427946645,Lin,51.0,25,target_baseline
+1055,vassopresor_doses,-0.019279954457734456,Lin,52.0,25,target_baseline
+1056,is_female,-0.14223510177809412,Lin,53.0,25,target_baseline
+1057,ethnicity_ASIAN,-0.00296850542961747,Lin,54.0,25,target_baseline
+1058,ethnicity_BLACK,-0.05966037564989257,Lin,55.0,25,target_baseline
+1059,ethnicity_HISPANIC,-0.004921308711316068,Lin,56.0,25,target_baseline
+1060,ethnicity_OTHER,0.02244923662479221,Lin,57.0,25,target_baseline
+1061,ethnicity_WHITE,0.024534107372546105,Lin,58.0,25,target_baseline
+0,Hb_value_initial,0.7663469096162361,ORT,,1,target_baseline
+1,MCHC,0.08891816318131873,ORT,,1,target_baseline
+2,Creatinine,0.018233072391871167,ORT,,1,target_baseline
+3,Lactate Dehydrogenase (LD),0.016943947925853853,ORT,,1,target_baseline
+4,Chloride,0.015083768989384315,ORT,,1,target_baseline
+5,Urea Nitrogen,0.013456598303479441,ORT,,1,target_baseline
+6,Platelet Count,0.013075601672035263,ORT,,1,target_baseline
+7,Albumin,0.0100869037118568,ORT,,1,target_baseline
+8,is_female,0.009717257797253012,ORT,,1,target_baseline
+9,White Blood Cells,0.008668641143325176,ORT,,1,target_baseline
+10,RR_mean,0.007791935476382166,ORT,,1,target_baseline
+11,RR_min,0.005457377483639173,ORT,,1,target_baseline
+12,pO2,0.004642091897646389,ORT,,1,target_baseline
+13,Red Blood Cells,0.003829399422877978,ORT,,1,target_baseline
+14,HR_mean,0.0019511611439050783,ORT,,1,target_baseline
+15,HR_min,0.0012875323192822292,ORT,,1,target_baseline
+16,GLU_min,0.0011149052327919442,ORT,,1,target_baseline
+17,TEMP_sd,0.0010369105941623903,ORT,,1,target_baseline
+18,"Bilirubin, Total",0.0010261163914223343,ORT,,1,target_baseline
+19,Sodium,0.0009249481427035819,ORT,,1,target_baseline
+20,"Calcium, Total",0.0008921758778806233,ORT,,1,target_baseline
+21,Potassium,0.0008706663859110749,ORT,,1,target_baseline
+22,Hem_base_timelag,0.00071879835029519,ORT,,1,target_baseline
+23,Lactate,0.0005807827704579655,ORT,,1,target_baseline
+24,GLU_sd,0.0005772551911100874,ORT,,1,target_baseline
+25,SBP_min,0.0004778946479392709,ORT,,1,target_baseline
+26,DBP_sd,0.00046005713866948436,ORT,,1,target_baseline
+27,GLU_max,0.0004383892935415638,ORT,,1,target_baseline
+28,DBP_mean,0.00043438462595168594,ORT,,1,target_baseline
+29,INR(PT),0.0003927820146583388,ORT,,1,target_baseline
+30,RR_max,0.00034341796230910046,ORT,,1,target_baseline
+31,TEMP_min,0.0003347872747555379,ORT,,1,target_baseline
+32,DBP_max,0.000332550229886445,ORT,,1,target_baseline
+33,GLU_mean,0.00030246870152440835,ORT,,1,target_baseline
+34,ageatadmin,0.0002855893940817355,ORT,,1,target_baseline
+35,SPO2_mean,0.0002735261477700584,ORT,,1,target_baseline
+36,Phosphate,0.0002657630125143218,ORT,,1,target_baseline
+37,TEMP_mean,0.0002649496953831785,ORT,,1,target_baseline
+38,pCO2,0.00024309177486768563,ORT,,1,target_baseline
+39,SPO2_min,0.00023512868874006336,ORT,,1,target_baseline
+40,SBP_mean,0.00022842175691665525,ORT,,1,target_baseline
+41,HR_max,0.00020609504804757235,ORT,,1,target_baseline
+42,DBP_min,0.00016219559894065138,ORT,,1,target_baseline
+43,SBP_sd,0.00015894312529969278,ORT,,1,target_baseline
+44,ethnicity,0.00015148165380726467,ORT,,1,target_baseline
+45,TEMP_max,0.00015097881860543492,ORT,,1,target_baseline
+46,PTT,0.00013241108542150632,ORT,,1,target_baseline
+47,pH,0.00011098758905526495,ORT,,1,target_baseline
+48,SPO2_sd,0.00010721424060160837,ORT,,1,target_baseline
+49,Bicarbonate,9.417020315611089e-05,ORT,,1,target_baseline
+50,HR_sd,6.727493878205633e-05,ORT,,1,target_baseline
+51,RR_sd,3.835202627493462e-05,ORT,,1,target_baseline
+52,SPO2_max,3.768620128381043e-05,ORT,,1,target_baseline
+53,SBP_max,3.60856981325834e-05,ORT,,1,target_baseline
+54,vassopresor_doses,0.0,ORT,,1,target_baseline
+0,Hb_value_initial,0.7754415061359857,ORT,,5,target_baseline
+1,MCHC,0.08419792502270591,ORT,,5,target_baseline
+2,Chloride,0.020231527093268264,ORT,,5,target_baseline
+3,Creatinine,0.015541459468922684,ORT,,5,target_baseline
+4,Urea Nitrogen,0.014657382529997038,ORT,,5,target_baseline
+5,RR_mean,0.011370751330341915,ORT,,5,target_baseline
+6,pO2,0.010197758916539394,ORT,,5,target_baseline
+7,White Blood Cells,0.009696754456996068,ORT,,5,target_baseline
+8,is_female,0.009079160729184004,ORT,,5,target_baseline
+9,Lactate Dehydrogenase (LD),0.008712508227258641,ORT,,5,target_baseline
+10,Platelet Count,0.0073252470747463,ORT,,5,target_baseline
+11,Albumin,0.005843944286637865,ORT,,5,target_baseline
+12,Red Blood Cells,0.004330206150033058,ORT,,5,target_baseline
+13,Lactate,0.004019368769335687,ORT,,5,target_baseline
+14,RR_min,0.0028304354901561154,ORT,,5,target_baseline
+15,TEMP_sd,0.002660855932276902,ORT,,5,target_baseline
+16,"Calcium, Total",0.0021559383695867688,ORT,,5,target_baseline
+17,Hem_base_timelag,0.0014644216634914352,ORT,,5,target_baseline
+18,Sodium,0.0013988274536140771,ORT,,5,target_baseline
+19,HR_mean,0.0012209698785049907,ORT,,5,target_baseline
+20,INR(PT),0.0008203881317849618,ORT,,5,target_baseline
+21,pH,0.0007988048243907019,ORT,,5,target_baseline
+22,"Bilirubin, Total",0.0006290189123168664,ORT,,5,target_baseline
+23,HR_min,0.0004461400108667395,ORT,,5,target_baseline
+24,SPO2_mean,0.00042832064502550853,ORT,,5,target_baseline
+25,pCO2,0.0003820747085382273,ORT,,5,target_baseline
+26,ageatadmin,0.0003779765855013528,ORT,,5,target_baseline
+27,DBP_max,0.0003638174092880787,ORT,,5,target_baseline
+28,Phosphate,0.0003235198259798232,ORT,,5,target_baseline
+29,GLU_min,0.0002916993538397576,ORT,,5,target_baseline
+30,HR_max,0.00025778817142043243,ORT,,5,target_baseline
+31,Potassium,0.00024557006678974146,ORT,,5,target_baseline
+32,DBP_min,0.00023906020895179348,ORT,,5,target_baseline
+33,DBP_mean,0.00021735398025410677,ORT,,5,target_baseline
+34,RR_max,0.00020757319936975526,ORT,,5,target_baseline
+35,SPO2_min,0.00020249603386520457,ORT,,5,target_baseline
+36,HR_sd,0.00015000783918744942,ORT,,5,target_baseline
+37,SBP_sd,0.0001263943101903138,ORT,,5,target_baseline
+38,SBP_min,0.00012014941945339441,ORT,,5,target_baseline
+39,GLU_mean,0.0001037901385639208,ORT,,5,target_baseline
+40,GLU_max,9.815512653185242e-05,ORT,,5,target_baseline
+41,SBP_max,9.548661387650028e-05,ORT,,5,target_baseline
+42,PTT,8.408429585756106e-05,ORT,,5,target_baseline
+43,TEMP_mean,7.528886039971697e-05,ORT,,5,target_baseline
+44,TEMP_min,7.129575780728913e-05,ORT,,5,target_baseline
+45,Bicarbonate,6.71103195988983e-05,ORT,,5,target_baseline
+46,TEMP_max,6.135438634779914e-05,ORT,,5,target_baseline
+47,DBP_sd,5.944178438854218e-05,ORT,,5,target_baseline
+48,SBP_mean,5.81532435007679e-05,ORT,,5,target_baseline
+49,GLU_sd,5.488315412356488e-05,ORT,,5,target_baseline
+50,RR_sd,5.250032973495495e-05,ORT,,5,target_baseline
+51,ethnicity,4.5146376049533755e-05,ORT,,5,target_baseline
+52,SPO2_sd,3.553766314586077e-05,ORT,,5,target_baseline
+53,SPO2_max,3.266933347643109e-05,ORT,,5,target_baseline
+54,vassopresor_doses,0.0,ORT,,5,target_baseline
+0,Hb_value_initial,0.762285679765932,ORT,,10,target_baseline
+1,MCHC,0.08771123397100075,ORT,,10,target_baseline
+2,Chloride,0.021496232559804533,ORT,,10,target_baseline
+3,Creatinine,0.020710295559512565,ORT,,10,target_baseline
+4,Urea Nitrogen,0.013959204850927786,ORT,,10,target_baseline
+5,Platelet Count,0.013790161865256202,ORT,,10,target_baseline
+6,Lactate Dehydrogenase (LD),0.012141417088070225,ORT,,10,target_baseline
+7,Albumin,0.010686040338393633,ORT,,10,target_baseline
+8,pO2,0.010023426955732734,ORT,,10,target_baseline
+9,is_female,0.009059181066014733,ORT,,10,target_baseline
+10,White Blood Cells,0.008746687019340118,ORT,,10,target_baseline
+11,RR_mean,0.0075562089254699065,ORT,,10,target_baseline
+12,Red Blood Cells,0.003181385358226595,ORT,,10,target_baseline
+13,Sodium,0.002686514482814154,ORT,,10,target_baseline
+14,RR_min,0.0022998321022342076,ORT,,10,target_baseline
+15,"Calcium, Total",0.002083279136925198,ORT,,10,target_baseline
+16,Lactate,0.0015134237582293802,ORT,,10,target_baseline
+17,Hem_base_timelag,0.0014480028781352992,ORT,,10,target_baseline
+18,HR_mean,0.0013320562437100485,ORT,,10,target_baseline
+19,"Bilirubin, Total",0.0007410141626267193,ORT,,10,target_baseline
+20,TEMP_sd,0.0005675872022750731,ORT,,10,target_baseline
+21,Potassium,0.0005480495402596416,ORT,,10,target_baseline
+22,INR(PT),0.0005299821041144919,ORT,,10,target_baseline
+23,GLU_min,0.0004372161688722689,ORT,,10,target_baseline
+24,pCO2,0.00041750665817593394,ORT,,10,target_baseline
+25,HR_min,0.00037820577674459687,ORT,,10,target_baseline
+26,TEMP_min,0.0003413293983128086,ORT,,10,target_baseline
+27,ageatadmin,0.000318049905193935,ORT,,10,target_baseline
+28,RR_max,0.00026103472478454726,ORT,,10,target_baseline
+29,TEMP_mean,0.0002512729557822211,ORT,,10,target_baseline
+30,Phosphate,0.00020608804493495303,ORT,,10,target_baseline
+31,SPO2_min,0.0002054319547589546,ORT,,10,target_baseline
+32,SBP_mean,0.00019743845757022366,ORT,,10,target_baseline
+33,SBP_sd,0.00019450955357705634,ORT,,10,target_baseline
+34,SPO2_mean,0.00017437699481745344,ORT,,10,target_baseline
+35,SPO2_sd,0.00016587949667781854,ORT,,10,target_baseline
+36,PTT,0.0001233988948373252,ORT,,10,target_baseline
+37,HR_max,0.00011740543178556614,ORT,,10,target_baseline
+38,GLU_sd,0.00011533850169752195,ORT,,10,target_baseline
+39,Bicarbonate,0.00011393785555537924,ORT,,10,target_baseline
+40,TEMP_max,0.00011074774061878265,ORT,,10,target_baseline
+41,SBP_min,0.00010591273510108276,ORT,,10,target_baseline
+42,RR_sd,9.94993773845477e-05,ORT,,10,target_baseline
+43,GLU_mean,8.868488379345496e-05,ORT,,10,target_baseline
+44,pH,7.627727799147042e-05,ORT,,10,target_baseline
+45,ethnicity,6.465123423388301e-05,ORT,,10,target_baseline
+46,SPO2_max,6.095352599379438e-05,ORT,,10,target_baseline
+47,DBP_max,5.511401543729966e-05,ORT,,10,target_baseline
+48,SBP_max,5.0639859198119106e-05,ORT,,10,target_baseline
+49,DBP_mean,5.013951685512279e-05,ORT,,10,target_baseline
+50,HR_sd,4.110990271536724e-05,ORT,,10,target_baseline
+51,GLU_max,3.647629360619803e-05,ORT,,10,target_baseline
+52,DBP_sd,2.4971389630625963e-05,ORT,,10,target_baseline
+53,DBP_min,1.9504538355786588e-05,ORT,,10,target_baseline
+54,vassopresor_doses,0.0,ORT,,10,target_baseline
+0,Hb_value_initial,0.7675719931829927,ORT,,15,target_baseline
+1,MCHC,0.08135366985683204,ORT,,15,target_baseline
+2,Urea Nitrogen,0.020669604956648147,ORT,,15,target_baseline
+3,Platelet Count,0.015667264772974965,ORT,,15,target_baseline
+4,Lactate Dehydrogenase (LD),0.01495565209106725,ORT,,15,target_baseline
+5,RR_mean,0.014008473310447144,ORT,,15,target_baseline
+6,Chloride,0.013454813987869706,ORT,,15,target_baseline
+7,Creatinine,0.011660808776571144,ORT,,15,target_baseline
+8,is_female,0.010599328292942082,ORT,,15,target_baseline
+9,White Blood Cells,0.009738464483983689,ORT,,15,target_baseline
+10,pO2,0.009263888163639905,ORT,,15,target_baseline
+11,Albumin,0.0059673571627925845,ORT,,15,target_baseline
+12,Red Blood Cells,0.0037757125279480313,ORT,,15,target_baseline
+13,RR_min,0.003015896709128365,ORT,,15,target_baseline
+14,"Bilirubin, Total",0.002629004689374144,ORT,,15,target_baseline
+15,"Calcium, Total",0.002108215732535828,ORT,,15,target_baseline
+16,Sodium,0.0017039646149017448,ORT,,15,target_baseline
+17,TEMP_sd,0.0016347533390369288,ORT,,15,target_baseline
+18,HR_mean,0.0013178331155045552,ORT,,15,target_baseline
+19,HR_min,0.0011455269717301352,ORT,,15,target_baseline
+20,Hem_base_timelag,0.0011336125554510673,ORT,,15,target_baseline
+21,Lactate,0.00089987850564038,ORT,,15,target_baseline
+22,Potassium,0.0008009805840299766,ORT,,15,target_baseline
+23,HR_max,0.0007781604990315011,ORT,,15,target_baseline
+24,ageatadmin,0.0004737518371813967,ORT,,15,target_baseline
+25,GLU_min,0.0003975058159035484,ORT,,15,target_baseline
+26,GLU_max,0.0003207091292953301,ORT,,15,target_baseline
+27,DBP_mean,0.00027251265954197614,ORT,,15,target_baseline
+28,INR(PT),0.00025568679800489624,ORT,,15,target_baseline
+29,SBP_min,0.00023707191443420915,ORT,,15,target_baseline
+30,DBP_max,0.00022067390152521974,ORT,,15,target_baseline
+31,Bicarbonate,0.00018452598155231078,ORT,,15,target_baseline
+32,RR_max,0.00017475369781392043,ORT,,15,target_baseline
+33,ethnicity,0.0001739922362186374,ORT,,15,target_baseline
+34,SBP_mean,0.00016107940095915125,ORT,,15,target_baseline
+35,SBP_sd,0.0001559851646344104,ORT,,15,target_baseline
+36,GLU_sd,0.00015524906926172403,ORT,,15,target_baseline
+37,Phosphate,0.00011392060923126072,ORT,,15,target_baseline
+38,TEMP_min,0.00011377416172718293,ORT,,15,target_baseline
+39,pCO2,0.0001137471095003839,ORT,,15,target_baseline
+40,DBP_min,9.640476444759716e-05,ORT,,15,target_baseline
+41,TEMP_mean,9.100726607603339e-05,ORT,,15,target_baseline
+42,DBP_sd,7.58651117770392e-05,ORT,,15,target_baseline
+43,pH,7.074288312351722e-05,ORT,,15,target_baseline
+44,HR_sd,6.0118702356472904e-05,ORT,,15,target_baseline
+45,SPO2_sd,5.5831475995807685e-05,ORT,,15,target_baseline
+46,GLU_mean,4.5350745798691424e-05,ORT,,15,target_baseline
+47,SPO2_mean,3.20070302748366e-05,ORT,,15,target_baseline
+48,TEMP_max,2.453473934136488e-05,ORT,,15,target_baseline
+49,SPO2_max,2.3784744760370157e-05,ORT,,15,target_baseline
+50,RR_sd,1.5286232352605058e-05,ORT,,15,target_baseline
+51,SPO2_min,1.1923629309946547e-05,ORT,,15,target_baseline
+52,SBP_max,8.733923716120765e-06,ORT,,15,target_baseline
+53,PTT,8.610380809840259e-06,ORT,,15,target_baseline
+54,vassopresor_doses,0.0,ORT,,15,target_baseline
+0,Hb_value_initial,0.7681263954581984,ORT,,20,target_baseline
+1,MCHC,0.09813078669582853,ORT,,20,target_baseline
+2,RR_mean,0.01833417245244639,ORT,,20,target_baseline
+3,Creatinine,0.017194121004499543,ORT,,20,target_baseline
+4,Chloride,0.014029648514448089,ORT,,20,target_baseline
+5,Albumin,0.00901060583329088,ORT,,20,target_baseline
+6,Urea Nitrogen,0.008816321049374454,ORT,,20,target_baseline
+7,Platelet Count,0.008309858000359082,ORT,,20,target_baseline
+8,White Blood Cells,0.00822123910477978,ORT,,20,target_baseline
+9,is_female,0.007799911134322818,ORT,,20,target_baseline
+10,Lactate Dehydrogenase (LD),0.007489971984791352,ORT,,20,target_baseline
+11,Red Blood Cells,0.006736388102917922,ORT,,20,target_baseline
+12,pO2,0.00612865438615918,ORT,,20,target_baseline
+13,Sodium,0.0024982304536805737,ORT,,20,target_baseline
+14,"Calcium, Total",0.002302289696214157,ORT,,20,target_baseline
+15,RR_min,0.0022833743876007257,ORT,,20,target_baseline
+16,Lactate,0.0017650307078485813,ORT,,20,target_baseline
+17,Hem_base_timelag,0.0016744121039442938,ORT,,20,target_baseline
+18,SPO2_mean,0.001582844729030776,ORT,,20,target_baseline
+19,TEMP_sd,0.001184819392051943,ORT,,20,target_baseline
+20,ageatadmin,0.001004185287441985,ORT,,20,target_baseline
+21,"Bilirubin, Total",0.0008039222518833684,ORT,,20,target_baseline
+22,HR_max,0.000665696910857241,ORT,,20,target_baseline
+23,Potassium,0.0006312211023661084,ORT,,20,target_baseline
+24,GLU_min,0.0005373027959979272,ORT,,20,target_baseline
+25,INR(PT),0.00043131857779917697,ORT,,20,target_baseline
+26,DBP_sd,0.000400161491350901,ORT,,20,target_baseline
+27,SPO2_min,0.00039341367356979646,ORT,,20,target_baseline
+28,RR_max,0.0003311964793508259,ORT,,20,target_baseline
+29,HR_mean,0.00032439107815952713,ORT,,20,target_baseline
+30,GLU_max,0.0003003853021598034,ORT,,20,target_baseline
+31,Phosphate,0.0002646585890531301,ORT,,20,target_baseline
+32,SPO2_sd,0.00022051734965579479,ORT,,20,target_baseline
+33,DBP_max,0.0002167039863133645,ORT,,20,target_baseline
+34,HR_min,0.00021458324977556182,ORT,,20,target_baseline
+35,pCO2,0.00018739268503460628,ORT,,20,target_baseline
+36,DBP_min,0.00018147334910062284,ORT,,20,target_baseline
+37,TEMP_max,0.0001640916287182085,ORT,,20,target_baseline
+38,SBP_mean,0.00010819583501911335,ORT,,20,target_baseline
+39,SBP_min,0.00010077097766616738,ORT,,20,target_baseline
+40,SBP_sd,9.987213456373569e-05,ORT,,20,target_baseline
+41,SPO2_max,9.430459240449606e-05,ORT,,20,target_baseline
+42,GLU_mean,8.486033873437201e-05,ORT,,20,target_baseline
+43,SBP_max,7.061424932790775e-05,ORT,,20,target_baseline
+44,RR_sd,6.80832380919401e-05,ORT,,20,target_baseline
+45,PTT,6.669252787152705e-05,ORT,,20,target_baseline
+46,DBP_mean,6.555565979366571e-05,ORT,,20,target_baseline
+47,HR_sd,6.418066564286946e-05,ORT,,20,target_baseline
+48,Bicarbonate,5.492934114956555e-05,ORT,,20,target_baseline
+49,GLU_sd,5.362159829246058e-05,ORT,,20,target_baseline
+50,pH,5.360884920621123e-05,ORT,,20,target_baseline
+51,TEMP_mean,4.652809767123173e-05,ORT,,20,target_baseline
+52,TEMP_min,4.415484960560302e-05,ORT,,20,target_baseline
+53,ethnicity,3.233606458369559e-05,ORT,,20,target_baseline
+54,vassopresor_doses,0.0,ORT,,20,target_baseline
+0,Hb_value_initial,0.7692386271799977,ORT,,25,target_baseline
+1,MCHC,0.084318200136695,ORT,,25,target_baseline
+2,Chloride,0.020806445529345487,ORT,,25,target_baseline
+3,Creatinine,0.020723858632905347,ORT,,25,target_baseline
+4,RR_mean,0.017193542083117398,ORT,,25,target_baseline
+5,Lactate Dehydrogenase (LD),0.016115758913505068,ORT,,25,target_baseline
+6,Urea Nitrogen,0.015093471501943331,ORT,,25,target_baseline
+7,is_female,0.008115791276806438,ORT,,25,target_baseline
+8,Albumin,0.008100774377110768,ORT,,25,target_baseline
+9,Platelet Count,0.006439386307813895,ORT,,25,target_baseline
+10,White Blood Cells,0.00566280070393171,ORT,,25,target_baseline
+11,pO2,0.005291153466797764,ORT,,25,target_baseline
+12,Red Blood Cells,0.003782467731043907,ORT,,25,target_baseline
+13,"Bilirubin, Total",0.001978849678160943,ORT,,25,target_baseline
+14,RR_min,0.0019479265976399295,ORT,,25,target_baseline
+15,"Calcium, Total",0.0017773253232434096,ORT,,25,target_baseline
+16,Lactate,0.0014745562083423446,ORT,,25,target_baseline
+17,TEMP_sd,0.0014422681620690125,ORT,,25,target_baseline
+18,SPO2_mean,0.0008500290350674634,ORT,,25,target_baseline
+19,SPO2_min,0.0007858786487071559,ORT,,25,target_baseline
+20,Sodium,0.0007558731931809781,ORT,,25,target_baseline
+21,HR_mean,0.000715016208677314,ORT,,25,target_baseline
+22,pCO2,0.0006108654283929471,ORT,,25,target_baseline
+23,INR(PT),0.0006061794899924298,ORT,,25,target_baseline
+24,Hem_base_timelag,0.0005442057306195613,ORT,,25,target_baseline
+25,ageatadmin,0.00041532060424066597,ORT,,25,target_baseline
+26,HR_min,0.00041477803711771,ORT,,25,target_baseline
+27,RR_max,0.0003753749872598319,ORT,,25,target_baseline
+28,Phosphate,0.00035766543824901207,ORT,,25,target_baseline
+29,GLU_min,0.0003315116161722471,ORT,,25,target_baseline
+30,SBP_sd,0.000323073632557063,ORT,,25,target_baseline
+31,SBP_min,0.00030311424205082627,ORT,,25,target_baseline
+32,Potassium,0.0003030577837821958,ORT,,25,target_baseline
+33,GLU_max,0.000292551764870411,ORT,,25,target_baseline
+34,SBP_mean,0.00023306969848163055,ORT,,25,target_baseline
+35,GLU_sd,0.00022292898852293175,ORT,,25,target_baseline
+36,pH,0.00020747692421526089,ORT,,25,target_baseline
+37,SPO2_max,0.00019497528152132446,ORT,,25,target_baseline
+38,GLU_mean,0.00018004747069071754,ORT,,25,target_baseline
+39,RR_sd,0.00017835418527760734,ORT,,25,target_baseline
+40,DBP_sd,0.00017354959830126219,ORT,,25,target_baseline
+41,PTT,0.0001653572481565084,ORT,,25,target_baseline
+42,TEMP_min,0.00014417319995548792,ORT,,25,target_baseline
+43,HR_max,0.0001255027745706702,ORT,,25,target_baseline
+44,TEMP_max,0.0001183123556262869,ORT,,25,target_baseline
+45,DBP_max,0.00010904882922141875,ORT,,25,target_baseline
+46,TEMP_mean,9.670955872353755e-05,ORT,,25,target_baseline
+47,SBP_max,8.022981725554905e-05,ORT,,25,target_baseline
+48,DBP_min,7.700976265729988e-05,ORT,,25,target_baseline
+49,ethnicity,7.094855114862415e-05,ORT,,25,target_baseline
+50,SPO2_sd,5.570852708196236e-05,ORT,,25,target_baseline
+51,DBP_mean,3.254862823430616e-05,ORT,,25,target_baseline
+52,Bicarbonate,2.746968382124119e-05,ORT,,25,target_baseline
+53,HR_sd,1.8879265129193644e-05,ORT,,25,target_baseline
+54,vassopresor_doses,0.0,ORT,,25,target_baseline

@@ -1,0 +1,5 @@
+,target,models,AUC_mean,CI_0.95,std
+3,target_bin,XGB,0.892,"(0.884, 0.901)",0.007
+2,target_bin,RFC,0.888,"(0.88, 0.896)",0.007
+1,target_bin,Log,0.886,"(0.878, 0.894)",0.007
+0,target_bin,CART,0.665,"(0.655, 0.674)",0.008
